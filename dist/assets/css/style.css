@@ -193,6 +193,10 @@ h6 {
   right: 0;
 }
 
+.-hm-dropdown__item {
+  cursor: pointer;
+}
+
 .-hm-header-top {
   width: 100%;
   display: -webkit-box;

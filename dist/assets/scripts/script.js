@@ -1,1 +1,2 @@
-// import * as functional from 'functional'
+import * as functional from './functional.js'
+functional.dropdownFn()
