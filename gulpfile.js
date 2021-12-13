@@ -37,7 +37,7 @@ let path = {
 	},
 	watch: {
 		html: source_folder + '/**/*.html',
-		css: source_folder + '/assets/sass/**/style.sass',
+		css: source_folder + '/assets/sass/**/*.sass',
 		js: source_folder + '/assets/scripts/**/*.js',
 		// ts: source_folder + '/assets/scripts/**/*.ts',
 		img: source_folder + '/assets/img/**/*.{jpeg,jpg,png,svg,gif,ico}',

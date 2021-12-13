@@ -1,1 +1,1 @@
-import * as functional from 'functional.js'
+// import * as functional from 'functional'
