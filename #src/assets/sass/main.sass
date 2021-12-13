@@ -12,6 +12,8 @@ html
 	margin: 0
 	border: 0
 	font-family: 'Open Sans'
+	color: $clBlack
+	text-decoration: none
 
 .-hm-container
 	max-width: $largeScreen
@@ -48,6 +50,10 @@ h6
 	font-size: 18px
 
 .-hm-text
+	&__bigger
+		font-size: 20px
+		@include adaptive($mediumScreen)
+			font-size: 16px
 	&__big
 		font-size: 18px
 	&__medium
@@ -97,5 +103,182 @@ h6
 	border-radius: 8px
 	cursor: pointer
 	color: white
+	transition: .2s
+	&:focus, &:hover
+		background: $clGreenHover
 	&--dark
 		background-color: $clBlack
+		&:focus, &:hover
+			background: $clBlackHover
+
+.-hm-dropdown
+	position: relative
+
+	&__opener
+		display: flex
+		align-items: center
+		gap: 10px
+		cursor: pointer
+
+	&__opener.active + &__list
+		display: flex
+
+	&__list
+		display: none
+		flex-direction: column
+		position: absolute
+		top: 20px
+		right: 0
+
+.-hm-header-top
+	width: 100%
+	display: flex
+	justify-content: center
+	text-align: center
+	position: sticky
+	top: 0
+	background-color: $clGreen
+	height: 46px
+	&__text
+		display: flex
+		align-items: center
+		color: white
+		gap: 10px
+
+.-hm-header-address
+	width: 100%
+	height: 40px
+	background-color: $clGray
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__text
+		display: flex
+		align-items: center
+		height: 40px
+		gap: 10px
+	&__row
+		display: flex
+		align-items: center
+		gap: 75px
+		@include adaptive($mediumScreen)
+			gap: 25px
+	@include adaptive($tablet)
+		display: none
+
+.-hm-header-nav
+	display: flex
+	align-items: center
+	padding: 31px 0
+	&__logo
+		margin-right: 80px
+		@include adaptive($mediumScreen)
+			margin-right: 20px
+			img
+				width: 84px
+
+	&__item
+		margin-left: 40px
+		background: transparent
+		position: relative
+		@include adaptive($mediumScreen)
+			margin-left: 20px
+		@include adaptive($tablet)
+			margin: 0
+
+	&__item-count
+		width: 24px
+		height: 24px
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		bottom: -5px
+		left: -8px
+		background-color: $clGreen
+		border-radius: 50%
+		color: white
+		font-weight: 600
+	&__button
+		display: flex
+		align-items: center
+		justify-content: center
+		gap: 10px
+		width: 158px
+		height: 58px
+		margin-right: 75px
+		@include adaptive($mediumScreen)
+			margin-right: 25px
+			width: 120px
+			height: 48px
+
+	&__menu
+		display: flex
+		flex-direction: column
+		width: 24px
+		height: 24px
+		padding: 6px 0
+		background: transparent
+		position: relative
+		gap: 3px
+
+	&__menu-element
+		display: block
+		width: 100%
+		height: 2px
+		border-radius: 2px
+		background-color: $clBlack
+	&--mobile
+		display: none
+
+		@include adaptive($tablet)
+			display: flex
+			justify-content: space-between
+
+	&:not(.-hm-header-nav--mobile)
+		@include adaptive($tablet)
+			display: none
+
+.-hm-header-search
+	width: 100%
+	&__label
+		position: relative
+
+	&__button
+		background: transparent
+		position: absolute
+		top: 0
+		right: 30px
+		cursor: pointer
+		@include adaptive($mediumScreen)
+			right: 10px
+	&__input
+		background-color: #f5f5f5
+		border-radius: 8px
+		width: 100%
+		height: 58px
+		padding: 0px 60px 0px 24px
+		&::placeholder
+			color: #d1d1d1
+
+		@include adaptive($mediumScreen)
+			height: 48px
+			padding-right: 45px
+
+.-hm-header-dropdown
+	margin-left: 80px
+	min-width: 190px
+	&__list
+		top: 40px
+		width: 100%
+		background-color: white
+		box-shadow: 0px 0px 10px rgba($clBlack, 0.2)
+		text-align: center
+		border-radius: 8px
+	&__item
+		padding: 10px 0
+
+	@include adaptive($mediumScreen)
+		margin-left: 20px
+		min-width: 157px
