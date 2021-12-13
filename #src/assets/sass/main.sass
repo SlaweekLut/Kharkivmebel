@@ -133,6 +133,29 @@ h6
 	&__item
 		cursor: pointer
 
+.-hm-dropdown-hover
+	position: relative
+
+	&__opener
+		display: flex
+		align-items: center
+		gap: 10px
+		cursor: pointer
+
+	&__opener:hover + &__list
+		display: flex
+
+	&__list
+		display: none
+		flex-direction: column
+		position: absolute
+		top: 20px
+		right: 0
+		&:hover
+			display: flex
+	&__item
+		cursor: pointer
+
 .-hm-header-top
 	width: 100%
 	display: flex
@@ -272,8 +295,10 @@ h6
 .-hm-header-dropdown
 	margin-left: 80px
 	min-width: 190px
+	&__opener
+		height: 58px
 	&__list
-		top: 40px
+		top: 56px
 		width: 100%
 		background-color: white
 		box-shadow: 0px 0px 10px rgba($clBlack, 0.2)

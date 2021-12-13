@@ -197,6 +197,48 @@ h6 {
   cursor: pointer;
 }
 
+.-hm-dropdown-hover {
+  position: relative;
+}
+
+.-hm-dropdown-hover__opener {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.-hm-dropdown-hover__opener:hover + .-hm-dropdown-hover__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-dropdown-hover__list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.-hm-dropdown-hover__list:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-dropdown-hover__item {
+  cursor: pointer;
+}
+
 .-hm-header-top {
   width: 100%;
   display: -webkit-box;
@@ -396,8 +438,12 @@ h6 {
   min-width: 190px;
 }
 
+.-hm-header-dropdown__opener {
+  height: 58px;
+}
+
 .-hm-header-dropdown__list {
-  top: 40px;
+  top: 56px;
   width: 100%;
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px rgba(56, 56, 56, 0.2);
