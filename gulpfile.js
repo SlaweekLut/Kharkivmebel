@@ -28,7 +28,7 @@ let path = {
 	src: {
 		html: [source_folder + '/*.html', '!' + source_folder + '/_*.html'],
 		css: source_folder + '/assets/sass/style.sass',
-		js: source_folder + '/assets/scripts/script.js',
+		js: source_folder + '/assets/scripts/*.js',
 		// ts: source_folder + '/assets/scripts/script.ts',
 		img: source_folder + '/assets/img/**/*.{jpeg,jpg,png,svg,gif,ico}',
 		pic: source_folder + '/assets/pic/**/*.{jpeg,jpg,png,svg,gif,ico}',
