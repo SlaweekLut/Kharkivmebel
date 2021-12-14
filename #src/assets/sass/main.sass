@@ -24,19 +24,19 @@ html
 	padding: 0px 20px
 
 	@include adaptive($largeScreen)
-		max-width: $mediumScreen
+		max-width: calc($mediumScreen - 40px)
 
 	@include adaptive($mediumScreen)
-		max-width: $smallScreen
+		max-width: calc($smallScreen - 40px)
 
 	@include adaptive($smallScreen)
-		max-width: $tablet
+		max-width: calc($tablet - 40px)
 
 	@include adaptive($tablet)
-		max-width: $largePhone
+		max-width: calc($largePhone - 40px)
 
 	@include adaptive($largePhone)
-		max-width: $smallPhone
+		max-width: calc($smallPhone - 40px)
 
 h1
 	font-size: 64px
@@ -63,9 +63,10 @@ h6
 	&__small
 		font-size: 13px
 
+/** Чекбокс **/
+
 .-hm-checkbox
 	display: flex
-	gap: 20px
 	&__input
 		appearance: none
 		opacity: 0
@@ -81,6 +82,7 @@ h6
 		height: 13px
 		border: 1px solid $clGreen
 		border-radius: 2px
+		margin-right: 10px
 		svg
 			display: none
 	&__input:checked + &__box
@@ -99,6 +101,8 @@ h6
 	&__input:focus + &__box
 		box-shadow: 0px 0px 0px 2px rgba($clGreen, 0.5)
 
+/** Кнопка **/
+
 .-hm-button
 	background-color: $clGreen
 	padding: 12px 20px
@@ -112,6 +116,8 @@ h6
 		background-color: $clBlack
 		&:focus, &:hover
 			background: $clBlackHover
+
+/** Выпадающее меню при клике **/
 
 .-hm-dropdown
 	position: relative
@@ -135,6 +141,8 @@ h6
 	&__item
 		cursor: pointer
 
+/** Выпадающее меню при наведении **/
+
 .-hm-dropdown-hover
 	position: relative
 
@@ -157,6 +165,8 @@ h6
 			display: flex
 	&__item
 		cursor: pointer
+
+/** Шапка сайта **/
 
 .-hm-header
 	&--sticky
@@ -343,15 +353,15 @@ h6
 		&.active, &:hover, &:focus
 			background-color: #F8F8F8
 	@include adaptive($mediumScreen)
+		overflow-x: scroll
 		&__item
 			font-size: 14px
 			white-space: nowrap
-	@include adaptive($smallScreen)
-		overflow-x: scroll
-		&__item
 			margin-bottom: 5px
 	@include adaptive($tablet)
 		display: none
+
+/** Подвал сайта **/
 
 .-hm-footer
 	padding-top: 64px
@@ -513,3 +523,108 @@ h6
 		&__payment
 			position: relative
 			left: none
+
+/** Форма подписки **/
+
+.-hm-form-subscribe
+	&__container
+		margin-bottom: 90px
+		padding: 64px 196px 48px
+		// height: 225px
+		display: flex
+		align-items: flex-start
+
+		background: url('../img/subscribe-bg.png') no-repeat
+		background-size: cover
+		background-position: 0 0
+		border-radius: 8px
+
+	&__column
+		&:nth-child(2)
+			max-width: 530px
+			margin: 0px 23px 0px 50px
+
+	h2
+		color: white
+	&__text
+		font-size: 24px
+		color: white
+	&__input
+		width: 100%
+		height: 55px
+		border-radius: 8px
+		margin-bottom: 10px
+		padding-left: 25px
+		&::placeholder
+			color: #d1d1d1
+	&__checkbox
+		& > .-hm-checkbox
+			&__box
+				border-color: white
+				min-width: 13px
+				min-height: 13px
+				svg
+					display: none
+			&__input:checked + &__box
+				svg
+					display: block
+					path
+						fill: white
+			&__input:hover + &__box
+				cursor: pointer
+			&__text
+				color: #fff
+				font-size: 13px
+				font-weight: 300
+				a
+					color: #fff
+					text-decoration: underline
+					text-underline-position: under
+	&__button
+		width: 206px
+		height: 55px
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			margin-right: 10px
+
+	@include adaptive($largeScreen)
+		&__container
+			padding: 48px 64px 32px
+		h2
+			font-size: 32px
+		&__text
+			font-size: 18px
+	@include adaptive($mediumScreen)
+		&__container
+			flex-wrap: wrap
+			padding: 48px 64px 32px
+		&__column
+			&:nth-child(2)
+				max-width: 600px
+				width: 100%
+				margin: 20px 0 0
+			&:nth-child(3)
+				margin: 20px 0 0 auto
+	@include adaptive($smallScreen)
+		&__container
+			flex-direction: column
+			align-items: center
+		&__column
+			&:nth-child(2)
+				max-width: 100%
+				width: 100%
+				margin: 20px 0 0
+			&:nth-child(3)
+				margin: 20px 0 0
+	@include adaptive($tablet)
+		&__container
+			padding: 50px 20px 50px
+			align-items: flex-start
+		h2
+			font-size: 24px
+			margin-bottom: 25px
+		&__column
+			&:nth-child(3)
+				margin: 35px 0 0
