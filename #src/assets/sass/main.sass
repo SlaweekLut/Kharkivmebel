@@ -768,3 +768,91 @@ h6
 				top: 67px
 			&:nth-child(3)
 				top: 67px
+
+/** Элемент категорий **/
+
+.-hm-category
+	margin-bottom: 100px
+	&__container
+		display: grid
+		grid-template-columns: repeat(6, 1fr)
+		gap: 44px
+
+	@include adaptive($largeScreen)
+		&__container
+			grid-template-columns: repeat(4, 1fr)
+
+	@include adaptive($smallScreen)
+		&__container
+			gap: 20px
+			grid-template-columns: repeat(3, 1fr)
+	@include adaptive($tablet)
+		margin-bottom: 70px
+		&__container
+			gap: 10px
+			grid-template-columns: repeat(2, 1fr)
+
+.-hm-category-item
+	background: #f5f5f5
+	height: 236px
+	border-radius: 8px
+	padding: 20px 13px
+	position: relative
+	&__title
+		margin-bottom: 7px
+	&__count
+		font-size: 16px
+		color: #c4c4c4
+	&__img
+		position: absolute
+		right: 0
+		bottom: 0
+	&__link
+		position: absolute
+		left: 0
+		bottom: 0
+		right: 0
+		top: 0
+		z-index: 2
+
+	&__button
+		display: inline-block
+		padding: 13px 23px
+		border: 1px solid $clGreen
+		color: $clGreen
+		border-radius: 8px
+		transition: .2s
+		svg
+			margin-left: 10px
+		path
+			transition: .2s
+			color: $clGreen
+		&:hover
+			background-color: $clGreen
+			color: white
+			path
+				color: white
+
+	&:last-child
+		padding: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+
+	@include adaptive($mediumScreen)
+		&:nth-child(11), &:nth-child(10), &:nth-child(9), &:nth-child(8)
+			display: none
+
+	@include adaptive($smallScreen)
+		&:nth-child(7), &:nth-child(6)
+			display: none
+
+	@include adaptive($tablet)
+		height: 123px
+		&__img
+			width: 40%
+		&__button
+			padding: 5px
+			font-size: 12px
+			svg
+				margin-left: 5px
