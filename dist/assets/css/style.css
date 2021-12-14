@@ -36,7 +36,7 @@ html {
 }
 
 .-hm-container {
-  max-width: 1960px;
+  max-width: 1919.98px;
   width: 100%;
   margin: 0 auto;
   padding: 0px 20px;
@@ -688,15 +688,15 @@ h6 {
   grid-area: payment;
 }
 
-@media screen and (max-width: 1960px) {
+@media screen and (max-width: 1919.98px) {
   .-hm-container {
-    max-width: 1480px;
+    max-width: 1439.98px;
   }
 }
 
-@media screen and (max-width: 1480px) {
+@media screen and (max-width: 1439.98px) {
   .-hm-container {
-    max-width: 1064px;
+    max-width: 1023.98px;
   }
 
   .-hm-text__bigger {
@@ -794,9 +794,9 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1064px) {
+@media screen and (max-width: 1023.98px) {
   .-hm-container {
-    max-width: 808px;
+    max-width: 767.98px;
   }
 
   .-hm-header-menu {
@@ -828,9 +828,9 @@ h6 {
   }
 }
 
-@media screen and (max-width: 808px) {
+@media screen and (max-width: 767.98px) {
   .-hm-container {
-    max-width: 465px;
+    max-width: 424.98px;
   }
 
   .-hm-header-address {
@@ -904,8 +904,8 @@ h6 {
   }
 }
 
-@media screen and (max-width: 465px) {
+@media screen and (max-width: 424.98px) {
   .-hm-container {
-    max-width: 360px;
+    max-width: 319.98px;
   }
 }
