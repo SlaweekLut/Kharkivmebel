@@ -7,6 +7,7 @@
 /** Общие стили **/
 
 html {
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
@@ -19,6 +20,19 @@ html {
   font-family: "Open Sans";
   color: #383838;
   text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: #72BF44;
+  border-radius: 4px;
 }
 
 .-hm-container {
@@ -212,7 +226,8 @@ h6 {
   cursor: pointer;
 }
 
-.-hm-dropdown-hover__opener:hover + .-hm-dropdown-hover__list {
+.-hm-dropdown-hover__opener:hover + .-hm-dropdown-hover__list,
+.-hm-dropdown-hover__opener:focus + .-hm-dropdown-hover__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,6 +337,19 @@ h6 {
   margin-left: 40px;
   background: transparent;
   position: relative;
+}
+
+.-hm-header-nav__item img {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.-hm-header-nav__item:focus img,
+.-hm-header-nav__item:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .-hm-header-nav__item-count {
@@ -456,6 +484,41 @@ h6 {
   padding: 10px 0;
 }
 
+.-hm-header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.-hm-header-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 11px 15px;
+  border-radius: 8px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 17px;
+}
+
+.-hm-header-menu__item.active,
+.-hm-header-menu__item:hover,
+.-hm-header-menu__item:focus {
+  background-color: #F8F8F8;
+}
+
 @media screen and (max-width: 1960px) {
   .-hm-container {
     max-width: 1480px;
@@ -506,11 +569,24 @@ h6 {
     margin-left: 20px;
     min-width: 157px;
   }
+
+  .-hm-header-menu__item {
+    font-size: 14px;
+    white-space: nowrap;
+  }
 }
 
 @media screen and (max-width: 1064px) {
   .-hm-container {
     max-width: 808px;
+  }
+
+  .-hm-header-menu {
+    overflow-x: scroll;
+  }
+
+  .-hm-header-menu__item {
+    margin-bottom: 5px;
   }
 }
 
@@ -537,6 +613,10 @@ h6 {
   }
 
   .-hm-header-nav:not(.-hm-header-nav--mobile) {
+    display: none;
+  }
+
+  .-hm-header-menu {
     display: none;
   }
 }

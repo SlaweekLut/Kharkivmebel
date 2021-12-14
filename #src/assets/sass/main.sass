@@ -4,6 +4,7 @@
 
 /** Общие стили **/
 html
+	scroll-behavior: smooth
 	font-size: 16px
 
 *
@@ -14,6 +15,7 @@ html
 	font-family: 'Open Sans'
 	color: $clBlack
 	text-decoration: none
+	@include scrollBar(3px, $clGray, $clGreen)
 
 .-hm-container
 	max-width: $largeScreen
@@ -142,7 +144,7 @@ h6
 		gap: 10px
 		cursor: pointer
 
-	&__opener:hover + &__list
+	&__opener:hover + &__list, &__opener:focus + &__list
 		display: flex
 
 	&__list
@@ -208,6 +210,11 @@ h6
 		margin-left: 40px
 		background: transparent
 		position: relative
+		img
+			transition: .2s
+		&:focus, &:hover
+			img
+				transform: scale(1.1)
 		@include adaptive($mediumScreen)
 			margin-left: 20px
 		@include adaptive($tablet)
@@ -310,3 +317,29 @@ h6
 	@include adaptive($mediumScreen)
 		margin-left: 20px
 		min-width: 157px
+
+.-hm-header-menu
+	display: flex
+	justify-content: space-between
+	border-radius: 8px
+	margin-bottom: 40px
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 11px 15px
+		border-radius: 8px
+		transition: .2s
+		font-size: 17px
+		&.active, &:hover, &:focus
+			background-color: #F8F8F8
+	@include adaptive($mediumScreen)
+		&__item
+			font-size: 14px
+			white-space: nowrap
+	@include adaptive($smallScreen)
+		overflow-x: scroll
+		&__item
+			margin-bottom: 5px
+	@include adaptive($tablet)
+		display: none
