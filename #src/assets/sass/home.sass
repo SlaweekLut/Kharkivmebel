@@ -8,8 +8,6 @@
 		gap: 40px
 
 	@include adaptive($mediumScreen)
-		h2
-			font-size: 24px
 		&__row
 			gap: 20px
 			margin-top: 20px
@@ -55,7 +53,7 @@
 		height: 100%
 
 	@include adaptive($tablet)
-		padding-bottom: 140px
+		padding: 37px 16px 140px
 		&__suptitle
 			font-size: 16px
 		&__title
@@ -69,3 +67,81 @@
 			position: absolute
 			object-fit: contain
 			height: 100%
+
+/** Интересное **/
+
+.-hm-interesting
+	margin-bottom: 140px
+	&__row
+		display: flex
+		justify-content: space-between
+		gap: 50px
+	@include adaptive($smallScreen)
+		&__row
+			gap: 20px
+
+	@include adaptive($tablet)
+		argin-bottom: 95px
+		&__row
+			flex-direction: column
+			gap: 40px
+
+.-hm-interesting-nav
+	display: flex
+	margin: 46px 0
+	gap: 65px
+	&__item
+		font-size: 18px
+		font-weight: 600
+		color: rgba($clBlack, 0.7)
+		background-color: transparent
+		transition: .4s
+		cursor: pointer
+		&:hover, &.active
+			color: $clGreen
+			&::after
+				width: 100%
+
+		&::after
+			content: ''
+			display: block
+			width: 0%
+			height: 2px
+			background-color: $clGreen
+			transition: .4s
+
+	@include adaptive($tablet)
+		margin: 24px 0px 42px
+		width: 100%
+		justify-content: space-between
+		gap: 0px
+
+.-hm-interesting-item
+	max-width: 510px
+	width: 100%
+	&__img
+		width: 100%
+	&__title
+		margin: 20px 0px 10px
+	&__text
+		margin-bottom: 27px
+		color: #a3a3a3
+
+	&__link
+		display: flex
+		align-items: center
+		font-size: 18px
+		font-weight: 600
+		svg
+			margin-left: 10px
+			width: 25px
+			height: 25px
+			padding: 7px
+			border-radius: 50%
+			background-color: $clGreen
+			transform: rotate(270deg)
+			path
+				color: #fff
+	@include adaptive($smallScreen)
+		&__title
+			font-size: 18px
