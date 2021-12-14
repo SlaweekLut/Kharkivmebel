@@ -3,3 +3,13 @@
 @mixin adaptive($size)
 	@media screen and (max-width: $size)
 		@content
+@mixin scrollBar($width, $trackColor, $thumbColor)
+	&::-webkit-scrollbar
+		width: $width
+		height: $width
+		background-color: $trackColor
+		border-radius: 4px
+		&-thumb
+			width: $width
+			background-color: $thumbColor
+			border-radius: 4px
