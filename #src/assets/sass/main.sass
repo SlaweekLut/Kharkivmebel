@@ -5,7 +5,7 @@
 /** Общие стили **/
 html
 	scroll-behavior: smooth
-	font-size: 16px
+	// font-size: 16px
 
 *
 	box-sizing: border-box
@@ -24,36 +24,18 @@ html
 	margin: 0 auto
 	padding: 0px 20px
 
-	@include adaptive($largeScreen)
-		max-width: calc($mediumScreen - 40px)
-
-	@include adaptive($mediumScreen)
-		max-width: calc($smallScreen - 40px)
-
-	@include adaptive($smallScreen)
-		max-width: calc($tablet - 40px)
-
-	@include adaptive($tablet)
-		max-width: calc($largePhone - 40px)
-
-	@include adaptive($largePhone)
-		max-width: $smallPhone
-
 h1
-	font-size: 64px
+	@include fluid-type($minWidth, $maxWidth, 36px, 64px)
 h2
-	font-size: 48px
-	@include adaptive($mediumScreen)
-		font-size: 24px
-
+	@include fluid-type($minWidth, $maxWidth, 24px, 48px)
 h3
-	font-size: 36px
+	@include fluid-type($minWidth, $maxWidth, 20px, 36px)
 h4
-	font-size: 24px
+	@include fluid-type($minWidth, $maxWidth, 18px, 24px)
 h5
-	font-size: 20px
+	@include fluid-type($minWidth, $maxWidth, 20px, 20px)
 h6
-	font-size: 18px
+	@include fluid-type($minWidth, $maxWidth, 16px, 18px)
 
 .-hm-text
 	&__bigger
@@ -61,11 +43,11 @@ h6
 		@include adaptive($mediumScreen)
 			font-size: 16px
 	&__big
-		font-size: 18px
+		@include fluid-type($minWidth, $maxWidth, 16px, 18px)
 	&__medium
-		font-size: 16px
+		@include fluid-type($minWidth, $maxWidth, 16px, 16px)
 	&__small
-		font-size: 13px
+		@include fluid-type($minWidth, $maxWidth, 13px, 13px)
 
 /** Чекбокс **/
 
@@ -224,11 +206,6 @@ h6
 	padding: 20px 0
 	&__logo
 		margin-right: 80px
-		@include adaptive($mediumScreen)
-			margin-right: 20px
-			img
-				width: 84px
-
 	&__item
 		margin-left: 40px
 		background: transparent
@@ -238,11 +215,6 @@ h6
 		&:focus, &:hover
 			img
 				transform: scale(1.1)
-		@include adaptive($mediumScreen)
-			margin-left: 20px
-		@include adaptive($tablet)
-			margin: 0
-
 	&__item-count
 		width: 24px
 		height: 24px
@@ -264,11 +236,6 @@ h6
 		width: 158px
 		height: 58px
 		margin-right: 75px
-		@include adaptive($mediumScreen)
-			margin-right: 25px
-			width: 120px
-			height: 48px
-
 	&__menu
 		display: flex
 		flex-direction: column
@@ -278,35 +245,50 @@ h6
 		background: transparent
 		position: relative
 		gap: 3px
-
 	&__menu-element
 		display: block
 		width: 100%
 		height: 2px
 		border-radius: 2px
 		background-color: $clBlack
+
 	&--mobile
 		display: none
 
 		@include adaptive($tablet)
 			display: flex
 			justify-content: space-between
-
 	&:not(.-hm-header-nav--mobile)
 		@include adaptive($tablet)
 			display: none
 
+	@include adaptive($mediumScreen)
+		&__logo
+			margin-right: 20px
+			img
+				width: 84px
+		&__item
+			margin-left: 20px
+		&__button
+			margin-right: 25px
+			width: 120px
+			height: 48px
+	@include adaptive($tablet)
+		&__item
+			margin: 0
+
 .-hm-header-search
 	width: 100%
+
 	&__label
 		position: relative
-
 	&__button
 		background: transparent
 		position: absolute
 		top: 0
 		right: 30px
 		cursor: pointer
+
 		@include adaptive($mediumScreen)
 			right: 10px
 	&__input
@@ -315,10 +297,18 @@ h6
 		width: 100%
 		height: 58px
 		padding: 0px 60px 0px 24px
+		@include fluid-type($tablet, $maxWidth, 12px, 16px)
+
 		&::placeholder
 			color: #d1d1d1
 
-		@include adaptive($mediumScreen)
+	@include adaptive($mediumScreen)
+		&__button
+			top: 5px
+			img
+				width: 15px
+				height: 15px
+		&__input
 			height: 48px
 			padding-right: 45px
 
@@ -354,14 +344,14 @@ h6
 		padding: 11px 15px
 		border-radius: 8px
 		transition: .2s
-		font-size: 17px
+		white-space: nowrap
+		@include fluid-type($tablet, $maxWidth, 10px, 18px)
 		&.active, &:hover, &:focus
 			background-color: #F8F8F8
 	@include adaptive($mediumScreen)
-		overflow-x: scroll
+		padding: 5px 10px
+		overflow-x: auto
 		&__item
-			font-size: 14px
-			white-space: nowrap
 			margin-bottom: 5px
 	@include adaptive($tablet)
 		display: none
@@ -703,7 +693,6 @@ h6
 						top: 67px
 					&:nth-child(3)
 						top: 134px
-
 	&__tag
 		position: absolute
 		top: 10px
@@ -718,7 +707,6 @@ h6
 		font-weight: 600
 		font-size: 20px
 		margin: 25px 0px 12px
-
 	&__price
 		font-size: 20px
 		s, small
@@ -797,10 +785,14 @@ h6
 
 .-hm-category-item
 	background: #f5f5f5
-	height: 236px
+	// height: 236px
+	// min-width: 132px
+	height: 0
+	width: 100%
 	border-radius: 8px
 	padding: 20px 13px
 	position: relative
+	padding-bottom: calc(100% - 20px)
 	&__title
 		margin-bottom: 7px
 	&__count
@@ -817,14 +809,15 @@ h6
 		right: 0
 		top: 0
 		z-index: 2
-
 	&__button
 		display: inline-block
-		padding: 13px 23px
+		padding: 13px 20px
 		border: 1px solid $clGreen
 		color: $clGreen
 		border-radius: 8px
 		transition: .2s
+		@include fluid-type($minWidth, $maxWidth, 15px, 18px)
+
 		svg
 			margin-left: 10px
 		path
@@ -837,25 +830,21 @@ h6
 				color: white
 
 	&:last-child
-		padding: 10px
 		display: flex
 		align-items: center
 		justify-content: center
+		padding: 50% 0
 
 	@include adaptive($mediumScreen)
 		&:nth-child(11), &:nth-child(10), &:nth-child(9), &:nth-child(8)
 			display: none
-
 	@include adaptive($smallScreen)
 		&:nth-child(7), &:nth-child(6)
 			display: none
-
 	@include adaptive($tablet)
-		height: 123px
 		&__img
-			width: 40%
+			width: 60%
 		&__button
 			padding: 5px
-			font-size: 12px
 			svg
 				margin-left: 5px

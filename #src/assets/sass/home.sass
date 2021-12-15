@@ -145,3 +145,124 @@
 	@include adaptive($smallScreen)
 		&__title
 			font-size: 18px
+
+/** Главный блок **/
+
+.-hm-hero
+	margin-bottom: 50px
+	.-hm-container
+		overflow: hidden
+	@include adaptive($tablet)
+		.-hm-container
+			padding: 0
+
+.-hm-hero-swiper
+	width: 80%
+	position: relative
+	.swiper-button-prev, .swiper-button-next
+		position: absolute
+		left: auto
+		right: -20px
+		width: 45px
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #FFFFFF
+		transform: rotate(270deg)
+		&::after
+			display: none
+			path
+				color: $clBlack
+			&:hover
+				path
+					color: $clGreen
+	.swiper-button-prev
+		left: -20px
+		right: auto
+		transform: rotate(90deg)
+
+	@include adaptive($tablet)
+		width: 100%
+		overflow: hidden
+		.swiper-button-prev, .swiper-button-next
+			display: none
+
+.-hm-hero-swiper-slide
+	width: 100%
+	background: #f5f5f5
+	position: relative
+	padding: 123px 90px
+	height: 620px
+	overflow: hidden
+
+	h1
+		position: relative
+		z-index: 1
+
+	&__subtitle
+		position: relative
+		z-index: 1
+		margin: 22px 0px 32px
+		font-weight: 600
+		max-width: 365px
+		@include fluid-type($minWidth, $maxWidth, 14px, 24px)
+	&__link
+		position: relative
+		z-index: 1
+		padding: 10px 52px
+		border: 1px solid $clBlack
+		border-radius: 8px
+		transition: .2s
+		@include fluid-type($minWidth, $maxWidth, 16px, 18px)
+		&:hover, &:focus
+			background-color: $clBlack
+			color: white
+	&__img
+		width: 60%
+		position: absolute
+		right: 0
+		bottom: 0
+
+	@include adaptive($smallScreen)
+		padding: 123px 50px
+	@include adaptive($tablet)
+		height: 630px
+		padding: 50px 20px
+
+		&__img
+			max-width: 370px
+			width: 100%
+			right: 0
+			bottom: 60px
+			object-fit: contain
+
+.-hm-hero-swiper-slide-discount
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	border-radius: 50%
+	width: 200px
+	height: 200px
+	background-color: $clGreen
+	position: absolute
+	bottom: -60px
+	right: 40%
+	z-index: 2
+	padding-bottom: 50px
+
+	&__percent
+		color: white
+		@include fluid-type($minWidth, $maxWidth, 24px, 48px)
+
+	&__text
+		color: white
+		@include fluid-type($minWidth, $maxWidth, 18px, 24px)
+
+	@include adaptive($tablet)
+		width: 150px
+		height: 150px
+		right: -50px
+		padding-right: 25px

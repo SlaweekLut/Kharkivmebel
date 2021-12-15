@@ -31,4 +31,20 @@ export const swiperFn = () => {
 		}
 	});
 	
+	const heroSwiper = new Swiper('.-hm-hero-swiper', {
+		loop: true,
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		
+		slidesPerView: 1,
+		spaceBetween: 24,
+
+		autoplay: {
+			delay: 5000,
+		},
+	});
 } 
