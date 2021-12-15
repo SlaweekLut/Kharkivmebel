@@ -19,3 +19,47 @@ export const dropdownFn = () => {
 
 	})
 }
+
+export const popupFn = () => {
+	const popupOpener = (popup, open, close, closeopen) => {
+		console.log(open, close, closeopen);
+		if(open != null) {
+			let openArr = open
+			openArr.forEach((item) => {
+				item.addEventListener('click', () => {
+					popup.classList.add('active')
+				}) 
+			})
+		}
+		if(close != null) {
+			let closeArr = close
+			closeArr.forEach((item) => {
+				item.addEventListener('click', () => {
+					popup.classList.remove('active')
+				}) 
+			})
+		}
+		if(closeopen != null) {
+			let closeopenArr = closeopen
+			closeopenArr.forEach((item) => {
+				item.addEventListener('click', () => {
+					popup.classList.toggle('active')
+				}) 
+			})
+		}
+	}	
+
+	const catalog = popupOpener (
+		document.querySelector('.-hm-header-catalog'), 
+		null, 
+		[...document.querySelectorAll('.-hm-header-catalog-close')], 
+		[...document.querySelectorAll('.-hm-header-catalog-open')]
+		)
+		
+	const menu = popupOpener (
+		document.querySelector('.-hm-nav-mobile-wrapper'), 
+		[...document.querySelectorAll('.-hm-header-nav__menu')],
+		[...document.querySelectorAll('.-hm-nav-mobile-header__close')], 
+		null
+		)
+}
