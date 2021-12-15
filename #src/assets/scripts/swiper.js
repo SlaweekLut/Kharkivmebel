@@ -47,4 +47,19 @@ export const swiperFn = () => {
 			delay: 5000,
 		},
 	});
+
+	const collectionSwiper = new Swiper('.-hm-collection-swiper', {
+		loop: true,
+	
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		allowTouchMove: false,
+		
+		slidesPerView: 1,
+		spaceBetween: 24,
+
+	});
 } 

@@ -267,3 +267,128 @@
 		height: 150px
 		right: -50px
 		padding-right: 25px
+
+/** Коллекция **/
+
+.-hm-collection
+	margin-bottom: 100px
+	h2
+		margin-bottom: 50px
+.-hm-collection-swiper
+	position: relative
+	overflow: hidden
+	.swiper-button-prev, .swiper-button-next
+		position: absolute
+		left: auto
+		right: -20px
+		width: 45px
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #FFFFFF
+		transform: rotate(270deg)
+		z-index: 4
+		&::after
+			display: none
+			path
+				color: $clBlack
+			&:hover
+				path
+					color: $clGreen
+	.swiper-button-prev
+		left: -20px
+		right: auto
+		transform: rotate(90deg)
+	@include adaptive($tablet)
+		.swiper-button-prev, .swiper-button-next
+			width: 25px
+			height: 25px
+			right: 15px
+		.swiper-button-prev
+			left: 15px
+
+.-hm-collection-swiper-slide
+	width: 100%
+	position: relative
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__hint
+		position: absolute
+		border-radius: 50%
+		width: 30px
+		height: 30px
+		display: flex
+		align-items: center
+		justify-content: center
+		background-color: #fff
+		transform-origin: center center
+		transition: 0.4s
+		cursor: pointer
+		&::after, &::before
+			content: ''
+			position: absolute
+			display: block
+			width: 16px
+			height: 2px
+			border-radius: 2px
+			background-color: $clBlack
+			transform-origin: center
+			transform: rotate(90deg)
+			transition: 0.4s
+		&::before
+			transform: rotate(0deg)
+		&.active
+			background-color: $clBlack
+			&::after, &::before
+				transform: rotate(45deg)
+				background-color: #fff
+			&::before
+				transform: rotate(-45deg)
+			.-hm-collection-swiper-slide__hint-block
+				opacity: 1
+				pointer-events: auto
+	&__hint-block
+		position: absolute
+		left: 40px
+		height: 70px
+		width: 180px
+		text-align: left
+		padding: 13px 15px
+		border-radius: 8px
+		background-color: #fff
+		transition: 0.4s
+		pointer-events: none
+		opacity: 0
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 25px
+			left: -20px
+			border: 10px solid transparent
+			border-right-color: white
+	&__title
+		font-size: 16px
+		font-weight: 600
+		margin-bottom: 5px
+	&__price
+		font-size: 14px
+	@include adaptive($smallScreen)
+		&__hint
+			width: 20px
+			height: 20px
+			&::after, &::before
+				width: 12px
+	@include adaptive($tablet)
+		overflow: auto
+		&__img
+			width: 940px
+		&__hint
+			width: 15px
+			height: 15px
+			&::after, &::before
+				width: 8px
