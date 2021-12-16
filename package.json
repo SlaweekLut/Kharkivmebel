@@ -32,6 +32,7 @@
 	"keywords": [],
 	"description": "",
 	"dependencies": {
-		"jsdom": "^19.0.0"
+		"jsdom": "^19.0.0",
+		"nouislider": "^15.5.0"
 	}
 }

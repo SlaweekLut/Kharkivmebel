@@ -12,7 +12,7 @@ export const dropdownFn = () => {
 		dropdownItem.forEach(item => {
 			item.addEventListener('click', () => {
 				dropdownOpener.classList.remove('active')
-				dropdownValue.innerText = item.innerText
+				dropdownValue.innerHTML = item.innerHTML
 			})
 		})
 
@@ -61,6 +61,13 @@ export const popupFn = () => {
 		[...document.querySelectorAll('.-hm-nav-mobile-header__close')], 
 		null
 		)
+
+	const filter = popupOpener (
+		document.querySelector('.-hm-mobile-filter-wrapper'), 
+		[...document.querySelectorAll('.-hm-mobile-filter-open')],
+		[...document.querySelectorAll('.-hm-mobile-filter-close')], 
+		null
+		)
 }
 
 export const collectionFn = () => {
@@ -106,4 +113,16 @@ export const collectionFn = () => {
 			}
 		})
 	})
+}
+
+export const choiceMulti = () => {
+	const choiceMultiFn = (items) => {
+		items.forEach(item => {
+			item.addEventListener('click', () => {
+				item.classList.toggle('active')
+			})
+		})
+	}
+
+	const materials = choiceMultiFn(document.querySelectorAll('.-hm-product-grid-aside-dropdown__materials'))
 }
