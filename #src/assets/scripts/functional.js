@@ -123,6 +123,25 @@ export const choiceMulti = () => {
 			})
 		})
 	}
+	const choiceOneFn = (items) => {
+		items.forEach(item => {
+			item.addEventListener('click', () => {
+				items.forEach(item => item.classList.remove('active'))
+				item.classList.add('active')
+			})
+		})
+	}
+
+	const color = choiceOneFn(document.querySelectorAll('.-hm-product-info__color')) 
 
 	const materials = choiceMultiFn(document.querySelectorAll('.-hm-product-grid-aside-dropdown__materials'))
+}
+
+export const choiceColor = () => {
+	const color = document.querySelectorAll('.-hm-product-info__color')
+	if(color.length > 0) {
+		color.forEach(color => {
+			color.style.background = color.dataset.color
+		});
+	}
 }

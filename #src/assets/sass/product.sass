@@ -1,0 +1,320 @@
+@import mixin
+.-hm-product
+	.-hm-container
+		display: grid
+		grid-template-columns: minmax(0px,871px) 474px 234px
+		justify-content: space-between
+		margin: 50px 0px 75px
+		@include adaptive($mediumScreen)
+			grid-template-columns: 1fr minmax(474px, 1fr)
+		@include adaptive($smallScreen)
+			grid-template-columns: 1fr
+		@include adaptive($tablet)
+			grid-template-columns: minmax(300px, 1fr)
+
+.-hm-product-gallery
+	display: flex
+	&__item
+		background-color: #f5f5f5
+		border-radius: 8px
+		overflow: hidden
+		max-width: 100% !important
+		max-height: 100% !important
+		&.swiper-slide-thumb-active
+			border: 1px solid $clGreen
+		img
+			width: 100% !important
+			height: 100% !important
+			object-fit: cover
+	&__item--more
+		position: relative
+		&::after
+			content: attr(data-photo)
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			height: 100%
+			background: rgba($clBlack, 0.3)
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			color: #fff
+			font-size: 14px
+			font-weight: 600
+
+	&--main
+		width: 100%
+		height: 100%
+		max-width: 700px
+		max-height: 650px
+		padding: 0px 20px
+		.swiper-button-prev, .swiper-button-next
+			position: absolute
+			left: auto
+			right: 0
+			width: 45px
+			height: 45px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			background-color: #fff
+			transform: rotate(270deg)
+			&::after
+				display: none
+				path
+					color: $clBlack
+				&:hover
+					path
+						color: $clGreen
+		.swiper-button-prev
+			right: auto
+			left: 0
+			transform: rotate(90deg)
+
+	&--thumb
+		max-width: 95px
+		max-height: 500px
+
+		.-hm-product-gallery__item
+			max-width: 95px
+			max-height: 95px
+
+	.-hm-product-info__title
+		display: none
+	@include adaptive($mediumScreen)
+		&--main
+			width: 100%
+			height: 100%
+			max-width: 500px
+			max-height: 450px
+	@include adaptive($smallScreen)
+		flex-direction: column-reverse
+		gap: 10px
+		&__item--more::after
+			display: none
+
+		&--main
+			width: 100%
+			height: 100%
+			min-width: 293px
+			min-height: 275px
+			max-height: 400px
+			max-width: 400px
+			// .swiper-wrapper
+		&--thumb
+			min-width: 205px
+			min-height: 40px
+			// margin-left: 20px
+			.-hm-product-gallery__item
+				min-width: 40px !important
+				min-height: 40px !important
+			.swiper-wrapper
+				width: 100%
+	@include adaptive($tablet)
+		.-hm-product-info__title
+			display: block
+
+.-hm-product-info
+	display: flex
+	flex-direction: column
+	gap: 20px
+	&__row
+		display: flex
+		&--credit
+			display: grid
+			grid-template-columns: 50% 50%
+			align-items: center
+			grid-template-areas: 'credit button' 'credit cards'
+		&--price
+			display: grid
+			grid-template-columns: 50% 50%
+			align-items: center
+			grid-template-areas: 'price button' 'price button'
+		&--button
+			gap: 17px
+			display: flex
+			flex-direction: row
+			grid-area: button
+			align-items: center
+	&__title
+		@include fluid-type($minWidth, $maxWidth,24px, 40px)
+		font-weight: 600
+
+	&__row-title
+		font-size: 16px
+		color: #bdbdbd
+		width: 50%
+
+	&__row-content
+		display: flex
+		width: 50%
+	&__stars
+		width: 100px
+		height: 20px
+		display: flex
+		position: relative
+	&__star
+		position: absolute
+		left: 0
+		top: 0
+		background: url('/assets/img/star.svg') repeat-x
+		background-size: 20px 20px
+		height: 20px
+		&:nth-child(1)
+			width: 20px
+		&:nth-child(2)
+			width: 40px
+		&:nth-child(3)
+			width: 60px
+		&:nth-child(4)
+			width: 80px
+		&:nth-child(5)
+			width: 100px
+
+	&__link
+		margin-left: 10px
+		color: #bdbdbd
+		text-decoration-line: underline
+		text-underline-position: under
+	&__text
+		font-weight: 600
+	&__list
+		display: flex
+		gap: 24px
+	&__color
+		width: 34px
+		height: 34px
+		border-radius: 50%
+		position: relative
+		cursor: pointer
+		&.active
+			box-shadow: 0px 0px 0px 2px white, 0px 0px 0px 4px $clGreen
+	&__column
+		display: flex
+		flex-direction: column
+		&--price
+
+	&__price
+		grid-area: price
+		font-size: 18px
+		text-decoration: line-through
+		&--discount
+			text-decoration: none
+			font-size: 28px
+			font-weight: bold
+			color: $clGreen
+
+	&__button
+		border-radius: 8px
+		height: 53px
+		width: calc(100% - 60px)
+		background-color: $clGreen
+		border: 1px solid $clGreen
+		color: #fff
+		cursor: pointer
+		font-size: 16px
+		&--like
+			border: 1px solid #BDBDBD
+			background-color: transparent
+			padding: 18px
+			height: 53px
+			width: 53px
+			svg
+				width: 16px
+				height: 15px
+			path
+				color: #BDBDBD
+
+		&--credit
+			width: 100%
+			color: $clBlack
+			font-weight: 600
+			background-color: transparent
+			grid-area: button
+
+	&__credit
+		grid-area: credit
+		width: 140px
+		font-weight: 600
+
+	&__cards
+		grid-area: cards
+		display: flex
+		align-items: center
+		gap: 18px
+		margin-top: 15px
+	&__title-two
+		margin: 37px 0px 14px
+	&__description-title
+		white-space: nowrap
+	&__underline
+		width: 100%
+		border-bottom: 1px dashed #bdbdbd
+		margin: 0px 20px
+	&__description-text
+		font-size: 14px
+		&--semibold
+			font-weight: 600
+	@include adaptive($tablet)
+		margin-top: 35px
+		.-hm-product-info__title
+			display: none
+		&__column
+			&--price
+				flex-direction: row-reverse
+				align-items: center
+				justify-content: flex-end
+				width: 100%
+				gap: 40px
+		&__row
+			&--price
+				width: 100%
+				display: flex
+				flex-direction: column
+			&--button
+				width: 100%
+				margin-top: 32px
+			&--credit
+				grid-template-columns: 1fr
+				grid-template-areas: 'button' 'credit' 'cards'
+			&--rate
+				flex-direction: column
+				.-hm-product-info
+					&__row-content
+						margin-top: 10px
+						width: 100%
+						justify-content: space-between
+					&__row-title
+						width: 100%
+		&__credit
+			margin-top: 18px
+			width: 100%
+.-hm-product-history
+	padding: 11px 19px
+	border: 1px solid #e0e0e0
+	border-radius: 8px
+	&__title
+		font-size: 18px
+		margin-bottom: 16px
+	@include adaptive($mediumScreen)
+		display: none
+.-hm-product-history-item
+	margin-bottom: 20px
+	img
+		width: 196px
+		height: 150px
+		object-fit: cover
+		object-position: center center
+	&__title
+		font-size: 16px
+		font-weight: 600px
+		margin: 15px 0
+	&__price
+		font-size: 16px
+		span
+			text-decoration: line-through
+			color: #E0E0E0

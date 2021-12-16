@@ -66,4 +66,80 @@ export const swiperFn = () => {
 		spaceBetween: 24,
 
 	});
+
+	let thumbProductSwiper 
+	= new Swiper(".-hm-product-gallery--thumb", {
+		loop: false,
+		allowTouchMove: false,
+		spaceBetween: 15,
+		speed: 0,
+		longSwipesMs: 0,
+		slidesPerView: 5,
+		direction: 'vertical'
+	});
+
+	if(window.innerWidth < 1023.98) {
+		thumbProductSwiper.destroy(false, true)
+		thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
+			loop: false,
+			allowTouchMove: false,
+			spaceBetween: 15,
+			speed: 0,
+			longSwipesMs: 0,
+			slidesPerView: 5,
+			direction: 'horizontal'
+		});
+	} else {
+		thumbProductSwiper.destroy(false, true)
+		thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
+			loop: false,
+			allowTouchMove: false,
+			spaceBetween: 15,
+			speed: 0,
+			longSwipesMs: 0,
+			slidesPerView: 5,
+			direction: 'vertical'
+		});
+	}
+
+	window.addEventListener('resize', () => {
+		if(window.innerWidth < 1023.98) {
+			thumbProductSwiper.destroy(false, true)
+			thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
+				loop: false,
+				allowTouchMove: false,
+				spaceBetween: 15,
+				speed: 0,
+				longSwipesMs: 0,
+				slidesPerView: 5,
+				direction: 'horizontal'
+			});
+		} else {
+			thumbProductSwiper.destroy(false, true)
+			thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
+				loop: false,
+				allowTouchMove: false,
+				spaceBetween: 15,
+				speed: 0,
+				longSwipesMs: 0,
+				slidesPerView: 5,
+				direction: 'vertical'
+			});
+		}
+	})
+
+	const mainProductSwiper = new Swiper(".-hm-product-gallery--main", {
+		loop: true,
+		allowTouchMove: false,
+		spaceBetween: 35,
+		speed: 0,
+		longSwipesMs: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: thumbProductSwiper,
+		},
+	});
 } 

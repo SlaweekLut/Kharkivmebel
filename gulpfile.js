@@ -94,7 +94,6 @@ export const images = () => {
 			gifsicle({ interlaced: true }),
 			mozjpeg({ quality: 75, progressive: true }),
 			optipng({ optimizationLevel: 5 }),
-			svgo()
 		]))
 		.pipe(gulp.dest(path.build.img))
 		.pipe(browsersync.stream())
