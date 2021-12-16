@@ -884,7 +884,12 @@ h6 {
 
 .-hm-footer {
   padding-top: 64px;
+  position: relative;
   background-color: #F7F7F7;
+}
+
+.-hm-footer .-hm-container {
+  padding: 0px 160px;
 }
 
 .-hm-footer__column {
@@ -912,6 +917,10 @@ h6 {
   margin: 12px 0;
 }
 
+.-hm-footer__text {
+  font-size: 12px;
+}
+
 .-hm-footer__text img {
   width: 20px;
   margin-right: 10px;
@@ -919,6 +928,10 @@ h6 {
 
 .-hm-footer__title {
   margin-bottom: 23px;
+}
+
+.-hm-footer__title {
+  font-size: 16px;
 }
 
 .-hm-footer__title img {
@@ -939,6 +952,10 @@ h6 {
 
 .-hm-footer__link {
   line-height: 38px;
+}
+
+.-hm-footer__link {
+  font-size: 12px;
 }
 
 .-hm-footer__link::after {
@@ -1040,6 +1057,28 @@ h6 {
   gap: 16px;
   left: calc(50% - 72px);
   grid-area: payment;
+}
+
+.-hm-totop {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #72BF44;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 /** Форма подписки **/
@@ -2039,6 +2078,18 @@ h6 {
   .-hm-header-catalog-main__item {
     font-size: calc(12px + 3 * ((100vw - 767.98px) / 1152.02));
   }
+
+  .-hm-footer__text {
+    font-size: calc(12px + 4 * ((100vw - 767.98px) / 1152.02));
+  }
+
+  .-hm-footer__title {
+    font-size: calc(16px + 8 * ((100vw - 767.98px) / 1152.02));
+  }
+
+  .-hm-footer__link {
+    font-size: calc(12px + 4 * ((100vw - 767.98px) / 1152.02));
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2092,6 +2143,18 @@ h6 {
 
   .-hm-header-catalog-main__item {
     font-size: 15px;
+  }
+
+  .-hm-footer__text {
+    font-size: 16px;
+  }
+
+  .-hm-footer__title {
+    font-size: 24px;
+  }
+
+  .-hm-footer__link {
+    font-size: 16px;
   }
 
   .-hm-category-item__button {
@@ -2192,6 +2255,10 @@ h6 {
     margin-bottom: 5px;
   }
 
+  .-hm-footer .-hm-container {
+    padding: 0px 80px;
+  }
+
   .-hm-footer__column {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -2224,17 +2291,19 @@ h6 {
   }
 
   .-hm-footer__link {
-    font-size: 14px;
     line-height: 32px;
   }
 
   .-hm-footer__text {
-    font-size: 12px;
     margin: 8px 0;
   }
 
   .-hm-footer__text img {
     width: 16px;
+  }
+
+  .-hm-footer__map {
+    max-width: 200px;
   }
 
   .-hm-footer-social {
@@ -2279,12 +2348,8 @@ h6 {
     padding: 20px;
   }
 
-  .-hm-footer__title {
-    font-size: 16px;
-  }
-
-  .-hm-footer__link {
-    font-size: 12px;
+  .-hm-footer .-hm-container {
+    padding: 0px 20px;
   }
 
   .-hm-footer__column:last-child {

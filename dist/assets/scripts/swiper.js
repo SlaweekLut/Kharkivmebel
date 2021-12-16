@@ -14,15 +14,19 @@ export const swiperFn = () => {
 			// when window width is >= 320px
 			319.89: {
 				slidesPerView: 1,
-				spaceBetween: 60
+				spaceBetween: 30
+			},
+			767.89: {
+				slidesPerView: 2,
+				spaceBetween: 30
 			},
 			1023.89: {
-				slidesPerView: 2,
-				spaceBetween: 60
+				slidesPerView: 3,
+				spaceBetween: 40
 			},
 			1439.89: {
-				slidesPerView: 3,
-				spaceBetween: 60
+				slidesPerView: 4,
+				spaceBetween: 40
 			},
 			1919.89: {
 				slidesPerView: 4,
