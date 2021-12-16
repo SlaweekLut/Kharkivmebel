@@ -1101,7 +1101,7 @@ h6 {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  background: url("../img/subscribe-bg.png") no-repeat;
+  background: url("../img/subscribe-bg.svg") no-repeat;
   background-size: cover;
   background-position: 0 0;
   border-radius: 8px;
