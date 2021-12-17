@@ -2736,6 +2736,8 @@ h6 {
   max-width: 700px;
   max-height: 650px;
   padding: 0px 20px;
+  position: sticky;
+  top: 178px;
 }
 
 .-hm-product-gallery--main .swiper-button-prev,
@@ -2786,7 +2788,9 @@ h6 {
 
 .-hm-product-gallery--thumb {
   max-width: 95px;
-  max-height: 500px;
+  max-height: 650px;
+  position: sticky;
+  top: 178px;
 }
 
 .-hm-product-gallery--thumb .-hm-product-gallery__item {
@@ -3354,6 +3358,61 @@ h6 {
   border-right: 1px solid #F2F2F2;
 }
 
+.-hm-user-aside--mobile {
+  display: none;
+}
+
+.-hm-user-aside--mobile .-hm-user-aside-item.active {
+  display: none;
+}
+
+.-hm-user-aside__list {
+  left: 0;
+  top: 72px;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.-hm-user-aside__opener {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #72BF44;
+  border-bottom-color: #72BF44;
+  border-radius: 8px;
+}
+
+.-hm-user-aside__opener circle {
+  color: #72BF44;
+}
+
+.-hm-user-aside__opener path {
+  color: #fff;
+}
+
+.-hm-user-aside__opener svg:first-child {
+  margin-right: 13px;
+}
+
+.-hm-user-aside__opener svg:last-child {
+  margin-left: auto;
+}
+
+.-hm-user-aside__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+}
+
 .-hm-user-avatar {
   padding: 34px 10px 25px;
   margin-bottom: 7px;
@@ -3368,6 +3427,7 @@ h6 {
   max-height: 40px;
   overflow: hidden;
   border-radius: 50%;
+  margin-right: 13px;
 }
 
 .-hm-user-avatar__icon img {
@@ -3865,6 +3925,10 @@ h6 {
     max-height: 450px;
   }
 
+  .-hm-product-gallery--thumb {
+    max-height: 450px;
+  }
+
   .-hm-product-history {
     display: none;
   }
@@ -3975,11 +4039,13 @@ h6 {
     min-height: 275px;
     max-height: 400px;
     max-width: 400px;
+    position: static;
   }
 
   .-hm-product-gallery--thumb {
     min-width: 205px;
     min-height: 40px;
+    position: static;
   }
 
   .-hm-product-gallery--thumb .-hm-product-gallery__item {
@@ -4533,5 +4599,20 @@ h6 {
 
   .-hm-delivery-text__title:first-child {
     margin-top: 47px;
+  }
+
+  .-hm-user__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "aside" "active";
+  }
+
+  .-hm-user-aside--mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .-hm-user-aside--desktop {
+    display: none;
   }
 }
