@@ -1,0 +1,101 @@
+@import mixin
+
+/** Контакты **/
+.-hm-contacts
+
+	&__title
+		margin: 32px 0
+	&__subtitle
+		margin-bottom: 46px
+		@include fluid-type($minWidth, $maxWidth, 16px, 18px)
+	@include adaptive($tablet)
+		&__title
+			margin: 28px 0px 9px
+		&__subtitle
+			margin-bottom: 24px
+
+.-hm-contacts-info
+	display: flex
+	align-items: center
+	&__block
+		padding: 0 50px 22px
+		color: white
+		max-width: 800px
+		height: 529px
+		background: url('../img/contact-bg.svg') no-repeat
+		background-size: cover
+		background-position: right
+	&__title
+		margin: 30px 0 13px
+		color: #fff
+		font-weight: 600
+		line-height: 36px
+		@include fluid-type($minWidth, $maxWidth, 20px, 24px)
+	&__text
+		color: #fff
+		margin-bottom: 12px
+
+	&__social
+		margin-right: 16px
+	&__map
+		min-width: 294px
+		height: 529px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	@include adaptive($tablet)
+		flex-direction: column
+		&__block
+			max-width: 100%
+			width: 100%
+			height: auto
+			padding: 0px 15px 26px
+		&__title
+			margin: 25px 0px 15px
+		&__map
+			width: 100%
+
+.-hm-contacts-swiper
+	margin: 71px 0
+	&__slide
+		padding: 0px 20px
+		img
+			width: 100%
+	.swiper-button-prev, .swiper-button-next
+		position: absolute
+		left: auto
+		right: 0
+		width: 45px
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #fff
+		transform: rotate(270deg)
+		&::after
+			display: none
+			path
+				color: $clBlack
+				&:hover
+					path
+						color: $clGreen
+	.swiper-button-prev
+		right: auto
+		left: 0
+		transform: rotate(90deg)
+	@include adaptive($tablet)
+		height: 438px
+		margin: 28px 0px 64px
+		&__slide
+			padding: 0
+			img
+				height: 438px
+				object-fit: cover
+		.swiper-button-prev, .swiper-button-next
+			display: none
+
+/** О нас **/
+
+/** Доставка **/

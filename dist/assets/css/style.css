@@ -3076,6 +3076,133 @@ h6 {
   color: #E0E0E0;
 }
 
+/** Контакты **/
+
+.-hm-contacts__title {
+  margin: 32px 0;
+}
+
+.-hm-contacts__subtitle {
+  margin-bottom: 46px;
+}
+
+.-hm-contacts__subtitle {
+  font-size: 16px;
+}
+
+.-hm-contacts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.-hm-contacts-info__block {
+  padding: 0 50px 22px;
+  color: white;
+  max-width: 800px;
+  height: 529px;
+  background: url("../img/contact-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.-hm-contacts-info__title {
+  margin: 30px 0 13px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+.-hm-contacts-info__title {
+  font-size: 20px;
+}
+
+.-hm-contacts-info__text {
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.-hm-contacts-info__social {
+  margin-right: 16px;
+}
+
+.-hm-contacts-info__map {
+  min-width: 294px;
+  height: 529px;
+}
+
+.-hm-contacts-info__map img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.-hm-contacts-swiper {
+  margin: 71px 0;
+}
+
+.-hm-contacts-swiper__slide {
+  padding: 0px 20px;
+}
+
+.-hm-contacts-swiper__slide img {
+  width: 100%;
+}
+
+.-hm-contacts-swiper .swiper-button-prev,
+.-hm-contacts-swiper .swiper-button-next {
+  position: absolute;
+  left: auto;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.-hm-contacts-swiper .swiper-button-prev::after,
+.-hm-contacts-swiper .swiper-button-next::after {
+  display: none;
+}
+
+.-hm-contacts-swiper .swiper-button-prev::after path,
+.-hm-contacts-swiper .swiper-button-next::after path {
+  color: #383838;
+}
+
+.-hm-contacts-swiper .swiper-button-prev::after path:hover path,
+.-hm-contacts-swiper .swiper-button-next::after path:hover path {
+  color: #72BF44;
+}
+
+.-hm-contacts-swiper .swiper-button-prev {
+  right: auto;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/** О нас **/
+
+/** Доставка **/
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
@@ -3143,6 +3270,14 @@ h6 {
 
   .-hm-product-info__title {
     font-size: calc(24px + 16 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-contacts__subtitle {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-contacts-info__title {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -3295,6 +3430,14 @@ h6 {
 
   .-hm-product-info__title {
     font-size: 40px;
+  }
+
+  .-hm-contacts__subtitle {
+    font-size: 18px;
+  }
+
+  .-hm-contacts-info__title {
+    font-size: 24px;
   }
 }
 
@@ -4046,5 +4189,55 @@ h6 {
   .-hm-product-info__credit {
     margin-top: 18px;
     width: 100%;
+  }
+
+  .-hm-contacts__title {
+    margin: 28px 0px 9px;
+  }
+
+  .-hm-contacts__subtitle {
+    margin-bottom: 24px;
+  }
+
+  .-hm-contacts-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .-hm-contacts-info__block {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 0px 15px 26px;
+  }
+
+  .-hm-contacts-info__title {
+    margin: 25px 0px 15px;
+  }
+
+  .-hm-contacts-info__map {
+    width: 100%;
+  }
+
+  .-hm-contacts-swiper {
+    height: 438px;
+    margin: 28px 0px 64px;
+  }
+
+  .-hm-contacts-swiper__slide {
+    padding: 0;
+  }
+
+  .-hm-contacts-swiper__slide img {
+    height: 438px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .-hm-contacts-swiper .swiper-button-prev,
+  .-hm-contacts-swiper .swiper-button-next {
+    display: none;
   }
 }

@@ -55,7 +55,6 @@ export const swiperFn = () => {
 	const collectionSwiper = new Swiper('.-hm-collection-swiper', {
 		loop: true,
 	
-		// Navigation arrows
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -67,8 +66,7 @@ export const swiperFn = () => {
 
 	});
 
-	let thumbProductSwiper 
-	= new Swiper(".-hm-product-gallery--thumb", {
+	let thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
 		loop: false,
 		allowTouchMove: false,
 		spaceBetween: 15,
@@ -77,8 +75,7 @@ export const swiperFn = () => {
 		slidesPerView: 5,
 		direction: 'vertical'
 	});
-
-	if(window.innerWidth < 1023.98) {
+	if(window.innerWidth < 1023.98 && document.querySelector('.-hm-product-gallery--thumb') != null) {
 		thumbProductSwiper.destroy(false, true)
 		thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
 			loop: false,
@@ -89,7 +86,7 @@ export const swiperFn = () => {
 			slidesPerView: 5,
 			direction: 'horizontal'
 		});
-	} else {
+	} else if (document.querySelector('.-hm-product-gallery--thumb') != null){
 		thumbProductSwiper.destroy(false, true)
 		thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
 			loop: false,
@@ -103,7 +100,7 @@ export const swiperFn = () => {
 	}
 
 	window.addEventListener('resize', () => {
-		if(window.innerWidth < 1023.98) {
+		if(window.innerWidth < 1023.98 && document.querySelector('.-hm-product-gallery--thumb') != null) {
 			thumbProductSwiper.destroy(false, true)
 			thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
 				loop: false,
@@ -114,7 +111,7 @@ export const swiperFn = () => {
 				slidesPerView: 5,
 				direction: 'horizontal'
 			});
-		} else {
+		} else if (document.querySelector('.-hm-product-gallery--thumb') != null) {
 			thumbProductSwiper.destroy(false, true)
 			thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
 				loop: false,
@@ -141,5 +138,17 @@ export const swiperFn = () => {
 		thumbs: {
 			swiper: thumbProductSwiper,
 		},
+	});
+	const contactsProductSwiper = new Swiper(".-hm-contacts-swiper", {
+		loop: true,
+	
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		slidesPerView: 1,
+		spaceBetween: 60,
+
 	});
 } 

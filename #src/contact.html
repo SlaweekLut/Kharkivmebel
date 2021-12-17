@@ -1,0 +1,73 @@
+@@include('_header.html')
+<main>
+	@@include('_line-nav.html', {first: 'Главная', second: 'Контакты', third: null})
+	<section class="-hm-contacts">
+		<div class="-hm-container">
+			<h2 class="-hm-contacts__title">Контакты</h2>
+			<p class="-hm-contacts__subtitle">
+				При создании генератора мы использовали небезизвестный универсальный код речей. Текст генерируется абзацами
+				случайным образом от двух до десяти предложений в абзаце.
+			</p>
+			<div class="-hm-contacts-info">
+				<div class="-hm-contacts-info__block">
+					<h4 class="-hm-contacts-info__title">Контакты</h4>
+					<p class="-hm-contacts-info__text">+38 050-2000-573</p>
+					<p class="-hm-contacts-info__text">+38 050-2000-573</p>
+					<p class="-hm-contacts-info__text">+38 050-2000-573</p>
+					<p class="-hm-contacts-info__text">+kharkivmebelinfo@gmail.com</p>
+					<h4 class="-hm-contacts-info__title">График работы</h4>
+					<p class="-hm-contacts-info__text">Понедельник-пятница: 09:00 - 18:00 Суббота: 10:00 - 16:00</p>
+					<p class="-hm-contacts-info__text">Суббота: 10:00 - 16:00</p>
+					<p class="-hm-contacts-info__text">Харьков, торговый центр на Гагарина 20А</p>
+					<h4 class="-hm-contacts-info__title">Соц. Сети</h4>
+					<a href="#" class="-hm-contacts-info__social"><img src="assets/img/facebook-contact.svg" alt="facebook" /></a>
+					<a href="#" class="-hm-contacts-info__social"
+						><img src="assets/img/instagram-contact.svg" alt="instagram"
+					/></a>
+				</div>
+				<div class="-hm-contacts-info__map">
+					<img src="assets/img/contacts-map.svg" alt="Карта" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="-hm-container">
+		<div class="-hm-contacts-swiper swiper">
+			<div class="swiper-button-prev">
+				<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M11 1L9.25269 2.76297C7.85925 4.1689 7.16253 4.87187 6.31333 4.98011C6.10527 5.00663 5.89473 5.00663 5.68667 4.98011C4.83748 4.87187 4.14075 4.1689 2.74731 2.76297L1 1"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+					/>
+				</svg>
+			</div>
+			<div class="swiper-button-next">
+				<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M11 1L9.25269 2.76297C7.85925 4.1689 7.16253 4.87187 6.31333 4.98011C6.10527 5.00663 5.89473 5.00663 5.68667 4.98011C4.83748 4.87187 4.14075 4.1689 2.74731 2.76297L1 1"
+						stroke="currentColor"
+						stroke-width="1.5"
+						stroke-linecap="round"
+					/>
+				</svg>
+			</div>
+			<div class="swiper-wrapper -hm-contacts-swiper__wrapper">
+				<div class="swiper-slide -hm-contacts-swiper__slide">
+					<img src="assets/img/contacts-swiper.svg" alt="картинка" />
+				</div>
+				<div class="swiper-slide -hm-contacts-swiper__slide">
+					<img src="assets/img/contacts-swiper.svg" alt="картинка" />
+				</div>
+				<div class="swiper-slide -hm-contacts-swiper__slide">
+					<img src="assets/img/contacts-swiper.svg" alt="картинка" />
+				</div>
+				<div class="swiper-slide -hm-contacts-swiper__slide">
+					<img src="assets/img/contacts-swiper.svg" alt="картинка" />
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include('_footer.html')
