@@ -78,7 +78,7 @@
 					<p class="-hm-product-info__row-title">Код товара:</p>
 					<p class="-hm-product-info__text">i00078385</p>
 				</div>
-				<div class="-hm-product-info__row">
+				<div class="-hm-product-info__row -hm-product-info__row--color">
 					<p class="-hm-product-info__row-title">Цвет:</p>
 					<div class="-hm-product-info__list">
 						<button class="-hm-product-info__color" data-color="#769699"></button>
@@ -155,11 +155,11 @@
 		</div>
 	</div>
 	<!-- Похожие товары -->
-	@@include('_swiper.html', {title: 'Похожие товары'})
+	@@include('_swiper.html', {title: 'Похожие товары', longword: false})
 	<!-- Посмотренное товары -->
-	@@include('_swiper.html', {title: 'Посмотренное товары'})
+	@@include('_swiper.html', {title: 'Посмотренное товары', longword: true})
 	<!-- Такие же товары -->
-	@@include('_swiper.html', {title: 'Такие же товары'})
+	@@include('_swiper.html', {title: 'Такие же товары', longword: false})
 	<!-- Форма подписки -->
 	@@include('_subscribe-form.html')
 </main>
