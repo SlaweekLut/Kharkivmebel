@@ -3310,6 +3310,7 @@ h6 {
 
 .-hm-delivery__img {
   width: 100%;
+  margin-right: 7%;
 }
 
 .-hm-delivery__img img {
@@ -4415,6 +4416,7 @@ h6 {
   }
 
   .-hm-delivery__img {
+    margin-right: 0;
     margin-left: -12px;
     width: calc(100% + 24px);
   }
