@@ -1,0 +1,63 @@
+@import mixin
+
+.-hm-user
+	margin-bottom: 100px
+	&__container
+		max-width: 1592px
+		display: grid
+		grid-template-columns: 300px 1fr
+		grid-template-areas: 'aside active'
+		gap: 50px
+.-hm-user-aside
+	grid-area: aside
+	display: flex
+	flex-direction: column
+	border-right: 1px solid #F2F2F2
+.-hm-user-avatar
+	padding: 34px 10px 25px
+	margin-bottom: 7px
+	border-bottom: 1px solid #f2f2f2
+	display: flex
+	&__icon
+		max-width: 40px
+		max-height: 40px
+		overflow: hidden
+		border-radius: 50%
+		img
+			width: 100%
+			height: 100%
+	&__column
+		display: flex
+		flex-direction: column
+	&__name
+		font-size: 15px
+		margin-bottom: 4px
+	&__mail
+		font-size: 13px
+		color: #bdbdbd
+
+.-hm-user-aside-item
+	padding: 16px 10px
+	border-bottom: 1px solid #f2f2f2
+	font-size: 15px
+	display: flex
+	background: transparent
+	align-items: center
+	cursor: pointer
+	svg
+		margin-right: 13px
+	circle
+		color: #f2f2f2
+	path
+		color: $clBlack
+	&.active
+		color: #fff
+		background-color: $clGreen
+		border-bottom-color: $clGreen
+		border-radius: 8px
+		circle
+			color: $clGreen
+		path
+			color: #fff
+
+.-hm-user-orders

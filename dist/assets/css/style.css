@@ -3330,6 +3330,112 @@ h6 {
   max-width: 840px;
 }
 
+.-hm-user {
+  margin-bottom: 100px;
+}
+
+.-hm-user__container {
+  max-width: 1592px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "aside active";
+  gap: 50px;
+}
+
+.-hm-user-aside {
+  grid-area: aside;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border-right: 1px solid #F2F2F2;
+}
+
+.-hm-user-avatar {
+  padding: 34px 10px 25px;
+  margin-bottom: 7px;
+  border-bottom: 1px solid #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-user-avatar__icon {
+  max-width: 40px;
+  max-height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.-hm-user-avatar__icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.-hm-user-avatar__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.-hm-user-avatar__name {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.-hm-user-avatar__mail {
+  font-size: 13px;
+  color: #bdbdbd;
+}
+
+.-hm-user-aside-item {
+  padding: 16px 10px;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.-hm-user-aside-item svg {
+  margin-right: 13px;
+}
+
+.-hm-user-aside-item circle {
+  color: #f2f2f2;
+}
+
+.-hm-user-aside-item path {
+  color: #383838;
+}
+
+.-hm-user-aside-item.active {
+  color: #fff;
+  background-color: #72BF44;
+  border-bottom-color: #72BF44;
+  border-radius: 8px;
+}
+
+.-hm-user-aside-item.active circle {
+  color: #72BF44;
+}
+
+.-hm-user-aside-item.active path {
+  color: #fff;
+}
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));

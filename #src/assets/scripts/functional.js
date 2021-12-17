@@ -133,7 +133,9 @@ export const choiceMulti = () => {
 	}
 
 	const color = choiceOneFn(document.querySelectorAll('.-hm-product-info__color')) 
-
+	
+	const userAside = choiceOneFn(document.querySelectorAll('.-hm-user-aside-item')) 
+	
 	const materials = choiceMultiFn(document.querySelectorAll('.-hm-product-grid-aside-dropdown__materials'))
 }
 
