@@ -151,4 +151,16 @@ export const swiperFn = () => {
 		spaceBetween: 60,
 
 	});
+	const aboutProductSwiper = new Swiper(".-hm-about-swiper", {
+		loop: true,
+	
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		slidesPerView: 1,
+		spaceBetween: 60,
+
+	});
 } 

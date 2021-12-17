@@ -1068,8 +1068,8 @@ h6 {
 }
 
 .-hm-totop {
-  position: absolute;
-  top: -20px;
+  position: fixed;
+  bottom: 20px;
   right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1082,6 +1082,7 @@ h6 {
   justify-content: center;
   width: 40px;
   height: 40px;
+  z-index: 4;
   border-radius: 50%;
   background-color: #72BF44;
   -webkit-transform: rotate(-90deg);
@@ -3201,7 +3202,132 @@ h6 {
 
 /** О нас **/
 
+.-hm-about {
+  margin-bottom: 120px;
+}
+
+.-hm-about__title {
+  margin: 32px 0;
+}
+
+.-hm-about-swiper {
+  max-width: 989px;
+  margin-left: -20px;
+  margin-bottom: 16px;
+}
+
+.-hm-about-swiper .swiper-button-prev,
+.-hm-about-swiper .swiper-button-next {
+  position: absolute;
+  left: auto;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.-hm-about-swiper .swiper-button-prev::after,
+.-hm-about-swiper .swiper-button-next::after {
+  display: none;
+}
+
+.-hm-about-swiper .swiper-button-prev::after path,
+.-hm-about-swiper .swiper-button-next::after path {
+  color: #383838;
+}
+
+.-hm-about-swiper .swiper-button-prev::after path:hover path,
+.-hm-about-swiper .swiper-button-next::after path:hover path {
+  color: #72BF44;
+}
+
+.-hm-about-swiper .swiper-button-prev {
+  right: auto;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.-hm-about-swiper__slide {
+  padding: 0px 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.-hm-about-swiper__slide img {
+  width: 100%;
+}
+
+.-hm-about-text__title {
+  margin: 50px 0 20px;
+  max-width: 840px;
+}
+
+.-hm-about-text__text {
+  max-width: 840px;
+}
+
 /** Доставка **/
+
+.-hm-delivery {
+  margin-bottom: 120px;
+}
+
+.-hm-delivery__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-delivery__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.-hm-delivery__title {
+  margin: 32px 0;
+}
+
+.-hm-delivery__img {
+  width: 100%;
+}
+
+.-hm-delivery__img img {
+  width: 100%;
+}
+
+.-hm-delivery-text__title {
+  margin: 50px 0 20px;
+  max-width: 840px;
+}
+
+.-hm-delivery-text__title:first-child {
+  margin-top: 0;
+}
+
+.-hm-delivery-text__text {
+  max-width: 840px;
+}
 
 @media screen and (min-width: 320px) {
   h1 {
@@ -4239,5 +4365,65 @@ h6 {
   .-hm-contacts-swiper .swiper-button-prev,
   .-hm-contacts-swiper .swiper-button-next {
     display: none;
+  }
+
+  .-hm-about {
+    margin-bottom: 60px;
+  }
+
+  .-hm-about__title {
+    margin: 28px 0;
+  }
+
+  .-hm-about-swiper {
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+
+  .-hm-about-swiper__slide {
+    padding: 0;
+  }
+
+  .-hm-about-swiper__slide img {
+    height: 410px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .-hm-about-swiper .swiper-button-prev,
+  .-hm-about-swiper .swiper-button-next {
+    display: none;
+  }
+
+  .-hm-about-text__title {
+    margin: 30px 0px 16px;
+  }
+
+  .-hm-delivery {
+    margin-bottom: 60px;
+  }
+
+  .-hm-delivery__title {
+    margin: 28px 0;
+  }
+
+  .-hm-delivery__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .-hm-delivery__img {
+    margin-left: -12px;
+    width: calc(100% + 24px);
+  }
+
+  .-hm-delivery-text__title {
+    margin: 30px 0px 16px;
+  }
+
+  .-hm-delivery-text__title:first-child {
+    margin-top: 47px;
   }
 }

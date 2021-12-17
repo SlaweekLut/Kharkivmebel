@@ -13,7 +13,6 @@
 			margin: 28px 0px 9px
 		&__subtitle
 			margin-bottom: 24px
-
 .-hm-contacts-info
 	display: flex
 	align-items: center
@@ -55,7 +54,6 @@
 			margin: 25px 0px 15px
 		&__map
 			width: 100%
-
 .-hm-contacts-swiper
 	margin: 71px 0
 	&__slide
@@ -98,4 +96,103 @@
 
 /** О нас **/
 
+.-hm-about
+	margin-bottom: 120px
+	&__title
+		margin: 32px 0
+	@include adaptive($tablet)
+		margin-bottom: 60px
+		&__title
+			margin: 28px 0
+.-hm-about-swiper
+	max-width: 989px
+	margin-left: -20px
+	margin-bottom: 16px
+	.swiper-button-prev, .swiper-button-next
+		position: absolute
+		left: auto
+		right: 0
+		width: 45px
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #fff
+		transform: rotate(270deg)
+		&::after
+			display: none
+			path
+				color: $clBlack
+				&:hover
+					path
+						color: $clGreen
+	.swiper-button-prev
+		right: auto
+		left: 0
+		transform: rotate(90deg)
+
+	&__slide
+		padding: 0px 20px
+		border-radius: 8px
+		overflow: hidden
+		img
+			width: 100%
+	@include adaptive($tablet)
+		margin-bottom: 8px
+		margin-left: 0
+		&__slide
+			padding: 0
+			img
+				height: 410px
+				object-fit: cover
+		.swiper-button-prev, .swiper-button-next
+			display: none
+.-hm-about-text
+
+	&__title
+		margin: 50px 0 20px
+		max-width: 840px
+	&__text
+		max-width: 840px
+	@include adaptive($tablet)
+		&__title
+			margin: 30px 0px 16px
 /** Доставка **/
+.-hm-delivery
+	margin-bottom: 120px
+	&__row
+		display: flex
+	&__column
+		display: flex
+		flex-direction: column
+		width: 100%
+	&__title
+		margin: 32px 0
+	&__img
+		width: 100%
+		img
+			width: 100%
+	@include adaptive($tablet)
+		margin-bottom: 60px
+		&__title
+			margin: 28px 0
+		&__row
+			flex-direction: column
+		&__img
+			margin-left: -12px
+			width: calc(100% + 24px)
+
+.-hm-delivery-text
+	&__title
+		margin: 50px 0 20px
+		max-width: 840px
+		&:first-child
+			margin-top: 0
+	&__text
+		max-width: 840px
+	@include adaptive($tablet)
+		&__title
+			margin: 30px 0px 16px
+			&:first-child
+				margin-top: 47px
