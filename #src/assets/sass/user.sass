@@ -2,16 +2,24 @@
 
 .-hm-user
 	margin-bottom: 100px
+	&__title
+		grid-area: title
+		margin: 21px 0 31px
 	&__container
 		max-width: 1592px
 		display: grid
+		grid-template-rows: 102px auto
 		grid-template-columns: 300px 1fr
-		grid-template-areas: 'aside active'
-		gap: 50px
+		grid-template-areas: 'aside title' 'aside active'
+		gap: 0 50px
 	@include adaptive($tablet)
+		&__title
+			margin: 10px 0 13px
 		&__container
+			grid-template-rows: auto auto
 			grid-template-columns: 1fr
-			grid-template-areas: 'aside' 'active'
+			grid-template-areas: 'title' 'aside' 'active'
+
 .-hm-user-aside
 	grid-area: aside
 	display: flex
@@ -21,15 +29,10 @@
 		display: none
 		.-hm-user-aside-item.active
 			display: none
-	@include adaptive($tablet)
-		&--mobile
-			display: flex
-		&--desktop
-			display: none
 	&__list
 		left: 0
 		top: 72px
-		z-index: 2
+		z-index: 4
 		background-color: #fff
 	&__opener
 		color: #fff
@@ -49,11 +52,21 @@
 				margin-right: 13px
 			&:last-child
 				margin-left: auto
+				margin-right: 10px
+		&.active
+			svg
+				&:last-child
+					transform: rotate(180deg)
 	&__value
 		display: flex
 		align-items: center
 		color: #fff
-
+	@include adaptive($tablet)
+		margin-bottom: 20px
+		&--mobile
+			display: flex
+		&--desktop
+			display: none
 .-hm-user-avatar
 	padding: 34px 10px 25px
 	margin-bottom: 7px
@@ -101,5 +114,110 @@
 			color: $clGreen
 		path
 			color: #fff
+	@include adaptive($tablet)
+		circle
+			color: #fff
 
+.-hm-user-tab
+	grid-area: active
+/** Заказы пользователя **/
 .-hm-user-orders
+	display: none
+	&__header
+		padding: 16px min(4%, 28px)
+		border-radius: 4px
+		border: 1px solid #f2f2f2
+		display: grid
+		grid-template-columns: 25% 30% 30% 15%
+		margin-bottom: 10px
+	&__title
+		color: #828282
+		text-align: center
+		border-right: 1px solid #f2f2f2
+		@include fluid-type($tablet, $maxWidth, 14px, 16px)
+
+		&:last-child
+			border-right: 0
+		&:first-child
+			text-align: left
+	&__address
+		background: transparent
+		color: $clGreen
+		margin-top: 30px
+		font-size: 16px
+		cursor: pointer
+	&.active
+		display: block
+	@include adaptive($tablet)
+		&__header
+			display: none
+
+.-hm-user-orders-item
+	display: grid
+	grid-template-columns: 25% 30% 30% 15%
+	padding: 8px min(4%, 28px)
+	border-radius: 4px
+	transition: .2s
+	position: relative
+	&:hover
+		background-color: #f2f2f2
+	&__text
+		text-align: center
+	&__row
+		display: flex
+		justify-content: center
+		&:first-child
+			justify-content: flex-start
+
+		.-hm-user-orders__title
+			display: none
+	&__del
+		position: absolute
+		right: 0
+		top: 10px
+		cursor: pointer
+		background-color: transparent
+
+	@include adaptive($tablet)
+		grid-template-columns: 1fr
+		margin-bottom: 35px
+		border-radius: 4px
+		border: 1px solid #f2f2f2
+		padding: 16px 12px
+		&__row
+			padding: 24px 0px
+			border-bottom: 1px solid #f2f2f2
+			justify-content: space-between
+			&:first-child
+				padding-top: 0
+				justify-content: space-between
+
+			&:last-child
+				padding-bottom: 12px
+				border-bottom: 0
+			.-hm-user-orders__title
+				display: inline
+				font-size: 16px
+		&__del
+			display: none
+
+/** Лист желаний пользователя **/
+.-hm-user-list, .-hm-user-view
+	display: none
+	grid-template-columns: repeat(4, 1fr)
+	gap: 25px
+	.-hm-swiper-slide__wrapper
+		height: unset
+	.-hm-pagination
+		display: none
+		grid-area: unset
+	@include adaptive($mediumScreen)
+		grid-template-columns: repeat(3, 1fr)
+	@include adaptive($smallScreen)
+		grid-template-columns: repeat(2, 1fr)
+	@include adaptive($tablet)
+		grid-template-columns: repeat(1, 1fr)
+		.-hm-pagination
+			display: flex
+	&.active
+		display: grid

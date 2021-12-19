@@ -3338,12 +3338,18 @@ h6 {
   margin-bottom: 100px;
 }
 
+.-hm-user__title {
+  grid-area: title;
+  margin: 21px 0 31px;
+}
+
 .-hm-user__container {
   max-width: 1592px;
   display: grid;
+  grid-template-rows: 102px auto;
   grid-template-columns: 300px 1fr;
-  grid-template-areas: "aside active";
-  gap: 50px;
+  grid-template-areas: "aside title" "aside active";
+  gap: 0 50px;
 }
 
 .-hm-user-aside {
@@ -3369,7 +3375,7 @@ h6 {
 .-hm-user-aside__list {
   left: 0;
   top: 72px;
-  z-index: 2;
+  z-index: 4;
   background-color: #fff;
 }
 
@@ -3401,6 +3407,13 @@ h6 {
 
 .-hm-user-aside__opener svg:last-child {
   margin-left: auto;
+  margin-right: 10px;
+}
+
+.-hm-user-aside__opener.active svg:last-child {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .-hm-user-aside__value {
@@ -3494,6 +3507,126 @@ h6 {
 
 .-hm-user-aside-item.active path {
   color: #fff;
+}
+
+.-hm-user-tab {
+  grid-area: active;
+}
+
+/** Заказы пользователя **/
+
+.-hm-user-orders {
+  display: none;
+}
+
+.-hm-user-orders__header {
+  padding: 16px min(4%, 28px);
+  border-radius: 4px;
+  border: 1px solid #f2f2f2;
+  display: grid;
+  grid-template-columns: 25% 30% 30% 15%;
+  margin-bottom: 10px;
+}
+
+.-hm-user-orders__title {
+  color: #828282;
+  text-align: center;
+  border-right: 1px solid #f2f2f2;
+}
+
+.-hm-user-orders__title {
+  font-size: 14px;
+}
+
+.-hm-user-orders__title:last-child {
+  border-right: 0;
+}
+
+.-hm-user-orders__title:first-child {
+  text-align: left;
+}
+
+.-hm-user-orders__address {
+  background: transparent;
+  color: #72BF44;
+  margin-top: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.-hm-user-orders.active {
+  display: block;
+}
+
+.-hm-user-orders-item {
+  display: grid;
+  grid-template-columns: 25% 30% 30% 15%;
+  padding: 8px min(4%, 28px);
+  border-radius: 4px;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+
+.-hm-user-orders-item:hover {
+  background-color: #f2f2f2;
+}
+
+.-hm-user-orders-item__text {
+  text-align: center;
+}
+
+.-hm-user-orders-item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.-hm-user-orders-item__row:first-child {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.-hm-user-orders-item__row .-hm-user-orders__title {
+  display: none;
+}
+
+.-hm-user-orders-item__del {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/** Лист желаний пользователя **/
+
+.-hm-user-list,
+.-hm-user-view {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.-hm-user-list .-hm-swiper-slide__wrapper,
+.-hm-user-view .-hm-swiper-slide__wrapper {
+  height: unset;
+}
+
+.-hm-user-list .-hm-pagination,
+.-hm-user-view .-hm-pagination {
+  display: none;
+  grid-area: unset;
+}
+
+.-hm-user-list.active,
+.-hm-user-view.active {
+  display: grid;
 }
 
 @media screen and (min-width: 320px) {
@@ -3614,6 +3747,10 @@ h6 {
   .-hm-swiper-slide-description__list {
     font-size: calc(12px + 3 * ((100vw - 767.98px) / 1152.02));
   }
+
+  .-hm-user-orders__title {
+    font-size: calc(14px + 2 * ((100vw - 767.98px) / 1152.02));
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -3731,6 +3868,10 @@ h6 {
 
   .-hm-contacts-info__title {
     font-size: 24px;
+  }
+
+  .-hm-user-orders__title {
+    font-size: 16px;
   }
 }
 
@@ -3932,6 +4073,11 @@ h6 {
   .-hm-product-history {
     display: none;
   }
+
+  .-hm-user-list,
+  .-hm-user-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 1023.98px) {
@@ -4055,6 +4201,11 @@ h6 {
 
   .-hm-product-gallery--thumb .swiper-wrapper {
     width: 100%;
+  }
+
+  .-hm-user-list,
+  .-hm-user-view {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -4601,9 +4752,18 @@ h6 {
     margin-top: 47px;
   }
 
+  .-hm-user__title {
+    margin: 10px 0 13px;
+  }
+
   .-hm-user__container {
+    grid-template-rows: auto auto;
     grid-template-columns: 1fr;
-    grid-template-areas: "aside" "active";
+    grid-template-areas: "title" "aside" "active";
+  }
+
+  .-hm-user-aside {
+    margin-bottom: 20px;
   }
 
   .-hm-user-aside--mobile {
@@ -4614,5 +4774,62 @@ h6 {
 
   .-hm-user-aside--desktop {
     display: none;
+  }
+
+  .-hm-user-aside-item circle {
+    color: #fff;
+  }
+
+  .-hm-user-orders__header {
+    display: none;
+  }
+
+  .-hm-user-orders-item {
+    grid-template-columns: 1fr;
+    margin-bottom: 35px;
+    border-radius: 4px;
+    border: 1px solid #f2f2f2;
+    padding: 16px 12px;
+  }
+
+  .-hm-user-orders-item__row {
+    padding: 24px 0px;
+    border-bottom: 1px solid #f2f2f2;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .-hm-user-orders-item__row:first-child {
+    padding-top: 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .-hm-user-orders-item__row:last-child {
+    padding-bottom: 12px;
+    border-bottom: 0;
+  }
+
+  .-hm-user-orders-item__row .-hm-user-orders__title {
+    display: inline;
+    font-size: 16px;
+  }
+
+  .-hm-user-orders-item__del {
+    display: none;
+  }
+
+  .-hm-user-list,
+  .-hm-user-view {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .-hm-user-list .-hm-pagination,
+  .-hm-user-view .-hm-pagination {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
