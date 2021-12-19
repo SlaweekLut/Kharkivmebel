@@ -68,6 +68,13 @@ export const popupFn = () => {
 		[...document.querySelectorAll('.-hm-mobile-filter-close')], 
 		null
 		)
+
+	const register = popupOpener (
+		document.querySelector('.-hm-popup-auth-wrapper'), 
+		[...document.querySelectorAll('.-js-register-open')],
+		[...document.querySelectorAll('.-hm-popup-auth__close')], 
+		null
+		)
 }
 
 export const collectionFn = () => {
@@ -160,6 +167,8 @@ export const choiceMulti = () => {
 		})
 	} 
 	setUserTitle()
+
+	const auth = choiceOneFn(document.querySelectorAll('.-hm-popup-auth__button'), document.querySelectorAll('.-hm-popup-auth-form')) 
 }
 
 export const choiceColor = () => {

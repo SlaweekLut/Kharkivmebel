@@ -4,6 +4,10 @@
 	@media screen and (max-width: $size)
 		@content
 
+@mixin adaptiveHeight($size)
+	@media screen and (max-height: $size)
+		@content
+
 @mixin scrollBar($width, $trackColor, $thumbColor)
 	&::-webkit-scrollbar
 		width: $width
