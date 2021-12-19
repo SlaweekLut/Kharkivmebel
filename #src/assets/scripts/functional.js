@@ -123,20 +123,43 @@ export const choiceMulti = () => {
 			})
 		})
 	}
-	const choiceOneFn = (items) => {
-		items.forEach(item => {
+	const choiceOneFn = (items, addiction) => {
+		items.forEach((item, index) => {
 			item.addEventListener('click', () => {
 				items.forEach(item => item.classList.remove('active'))
 				item.classList.add('active')
+				if(addiction !== undefined) {
+					addiction.forEach(item => item.classList.remove('active'))
+					if(addiction[index]) addiction[index].classList.add('active')
+				}
 			})
 		})
 	}
 
 	const color = choiceOneFn(document.querySelectorAll('.-hm-product-info__color')) 
 	
-	const userAside = choiceOneFn(document.querySelectorAll('.-hm-user-aside-item')) 
-	
 	const materials = choiceMultiFn(document.querySelectorAll('.-hm-product-grid-aside-dropdown__materials'))
+	
+	const userAsideItemDesktop = document.querySelectorAll('.-hm-user-aside-item--desktop')
+	const userAsideItemMobile = document.querySelectorAll('.-hm-user-aside-item--mobile')
+	const userMainItem = document.querySelectorAll('.-hm-user-tab')
+	const userTitle = document.querySelector('.-hm-user__title')
+
+	const userAsideDesktop = choiceOneFn(userAsideItemDesktop, userMainItem) 
+	const userAsideMobile = choiceOneFn(userAsideItemMobile, userMainItem) 
+	const setUserTitle = () => {
+		userAsideItemDesktop.forEach(item => {
+			item.addEventListener('click', () => {
+				userTitle.innerText = item.innerText.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+			})
+		})
+		userAsideItemMobile.forEach(item => {
+			item.addEventListener('click', () => {
+				userTitle.innerText = item.innerText.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
+			})
+		})
+	} 
+	setUserTitle()
 }
 
 export const choiceColor = () => {

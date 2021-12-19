@@ -197,6 +197,131 @@ h6 {
   box-shadow: 0px 0px 0px 2px rgba(114, 191, 68, 0.5);
 }
 
+.-hm-checkbox-green {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-checkbox-green__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+  max-width: 0;
+  max-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.-hm-checkbox-green__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  margin-right: 13px;
+}
+
+.-hm-checkbox-green__box img {
+  display: none;
+}
+
+.-hm-checkbox-green__input:checked + .-hm-checkbox-green__box {
+  background: #72BF44;
+  border-color: #72BF44;
+}
+
+.-hm-checkbox-green__input:checked + .-hm-checkbox-green__box img {
+  display: block;
+}
+
+.-hm-checkbox-green__input:disabled + .-hm-checkbox-green__box {
+  background: #F2F2F2;
+  border-color: #F2F2F2;
+}
+
+.-hm-checkbox-green__input:disabled:checked + .-hm-checkbox-green__box {
+  background: #F2F2F2;
+}
+
+.-hm-checkbox-green__input:hover + .-hm-checkbox-green__box {
+  cursor: pointer;
+}
+
+.-hm-checkbox-green__input:focus + .-hm-checkbox-green__box {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(114, 191, 68, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(114, 191, 68, 0.5);
+}
+
+.-hm-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.-hm-radio__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+  max-width: 0;
+  max-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.-hm-radio__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #72BF44;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.-hm-radio__input:checked + .-hm-radio__box {
+  background: #72BF44;
+}
+
+.-hm-radio__input:disabled + .-hm-radio__box {
+  background: #F2F2F2;
+  border-color: #F2F2F2;
+}
+
+.-hm-radio__input:disabled:checked + .-hm-radio__box {
+  background: #F2F2F2;
+}
+
+.-hm-radio__input:hover + .-hm-radio__box {
+  cursor: pointer;
+}
+
+.-hm-radio__input:focus + .-hm-radio__box {
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(114, 191, 68, 0.5);
+  box-shadow: 0px 0px 0px 2px rgba(114, 191, 68, 0.5);
+}
+
 /** Кнопка **/
 
 .-hm-button {
@@ -3410,10 +3535,16 @@ h6 {
   margin-right: 10px;
 }
 
-.-hm-user-aside__opener.active svg:last-child {
+.-hm-user-aside__opener.active svg {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+}
+
+.-hm-user-aside__opener.active .-hm-user-aside__value svg {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
 .-hm-user-aside__value {
@@ -3629,6 +3760,137 @@ h6 {
   display: grid;
 }
 
+/** Рассылка **/
+
+.-hm-user-mailing {
+  display: none;
+  gap: min(200px, 10%);
+}
+
+.-hm-user-mailing__title {
+  color: #828282;
+  margin-bottom: 20px;
+}
+
+.-hm-user-mailing__title {
+  font-size: 20px;
+}
+
+.-hm-user-mailing__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 50%;
+}
+
+.-hm-user-mailing__column:last-child {
+  gap: 20px;
+}
+
+.-hm-user-mailing.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-user-mailing-item {
+  margin-bottom: 30px;
+}
+
+.-hm-user-mailing-item__text {
+  margin-top: 10px;
+  color: #828282;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+/** Оплата **/
+
+.-hm-user-payment {
+  display: none;
+  width: 100%;
+  gap: min(200px, 10%);
+}
+
+.-hm-user-payment__radio {
+  margin-bottom: 30px;
+}
+
+.-hm-user-payment__button {
+  max-width: 220px;
+  width: 100%;
+  height: 53px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #72BF44;
+  cursor: pointer;
+}
+
+.-hm-user-payment .-hm-user-mailing__column:last-child {
+  margin-left: auto;
+}
+
+.-hm-user-payment.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-user-card {
+  padding: 23px 34px 26px;
+  background-color: #FAFAFA;
+  border-radius: 21px;
+  max-width: 514px;
+  width: 100%;
+}
+
+.-hm-user-card__title {
+  margin-bottom: 20px;
+}
+
+.-hm-user-card__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  color: #6d6d6d;
+  font-weight: 600;
+}
+
+.-hm-user-card__label {
+  font-size: 12px;
+}
+
+.-hm-user-card__input {
+  padding: 14px 20px;
+  border: 1px solid #ECECEC;
+  border-radius: 16px;
+  width: 100%;
+  color: #39373a;
+  font-size: 16px;
+}
+
+.-hm-user-card__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  margin: 25px 0;
+}
+
+.-hm-user-card .-hm-user-payment__button {
+  width: 164px;
+}
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
@@ -3704,6 +3966,14 @@ h6 {
 
   .-hm-contacts-info__title {
     font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-user-mailing__title {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-user-card__label {
+    font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -3872,6 +4142,14 @@ h6 {
 
   .-hm-user-orders__title {
     font-size: 16px;
+  }
+
+  .-hm-user-mailing__title {
+    font-size: 24px;
+  }
+
+  .-hm-user-card__label {
+    font-size: 14px;
   }
 }
 
@@ -4077,6 +4355,21 @@ h6 {
   .-hm-user-list,
   .-hm-user-view {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .-hm-user-payment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 73px;
+  }
+
+  .-hm-user-payment .-hm-user-mailing__column {
+    margin-left: 0 !important;
+    max-width: 100%;
   }
 }
 
@@ -4831,5 +5124,35 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .-hm-user-mailing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .-hm-user-mailing__column {
+    max-width: 100%;
+  }
+
+  .-hm-user-card__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name name" "date cvv";
+  }
+
+  .-hm-user-card__row .-hm-user-card__label:first-child {
+    grid-area: name;
+  }
+
+  .-hm-user-card__row .-hm-user-card__label:nth-child(2) {
+    grid-area: date;
+  }
+
+  .-hm-user-card__row .-hm-user-card__label:last-child {
+    grid-area: cvv;
   }
 }

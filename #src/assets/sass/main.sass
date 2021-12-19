@@ -119,6 +119,73 @@ h6
 	&__input:focus + &__box
 		box-shadow: 0px 0px 0px 2px rgba($clGreen, 0.5)
 
+.-hm-checkbox-green
+	display: flex
+	&__input
+		appearance: none
+		opacity: 0
+		max-width: 0
+		max-height: 0
+		width: 0
+		height: 0
+	&__box
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 18px
+		height: 18px
+		min-width: 18px
+		border: 1px solid $clBlack
+		border-radius: 4px
+		margin-right: 13px
+		img
+			display: none
+	&__input:checked + &__box
+		background: $clGreen
+		border-color: $clGreen
+		img
+			display: block
+	&__input:disabled + &__box
+		background: $clGray
+		border-color: $clGray
+	&__input:disabled:checked + &__box
+		background: $clGray
+	&__input:hover + &__box
+		cursor: pointer
+	&__input:focus + &__box
+		box-shadow: 0px 0px 0px 2px rgba($clGreen, 0.5)
+
+.-hm-radio
+	display: flex
+	align-items: center
+	&__input
+		appearance: none
+		opacity: 0
+		max-width: 0
+		max-height: 0
+		width: 0
+		height: 0
+	&__box
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 13px
+		height: 13px
+		border: 1px solid $clGreen
+		border-radius: 50%
+		margin-right: 10px
+	&__input:checked + &__box
+		background: $clGreen
+	&__input:disabled + &__box
+		background: $clGray
+		border-color: $clGray
+	&__input:disabled:checked + &__box
+		background: $clGray
+	&__input:hover + &__box
+		cursor: pointer
+	&__input:focus + &__box
+		box-shadow: 0px 0px 0px 2px rgba($clGreen, 0.5)
+
 /** Кнопка **/
 
 .-hm-button
