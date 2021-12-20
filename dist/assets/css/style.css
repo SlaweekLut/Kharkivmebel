@@ -4540,6 +4540,266 @@ h6 {
   font-weight: 700;
 }
 
+.-hm-interior-product {
+  margin-top: 30px;
+}
+
+.-hm-interior-product__title {
+  grid-area: title;
+}
+
+.-hm-interior-product__title {
+  font-size: 24px;
+}
+
+.-hm-interior-product .-hm-container {
+  display: grid;
+  grid-template-columns: minmax(0px, 1041px) minmax(0px, 546px);
+  grid-template-rows: 40px auto;
+  gap: 30px;
+  grid-template-areas: "gallery title" "gallery info";
+}
+
+.-hm-interior-product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 46px;
+}
+
+.-hm-interior-product-info__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.-hm-interior-product-info__row:last-child {
+  gap: 30px;
+}
+
+.-hm-interior-product-info__title {
+  width: 40%;
+}
+
+.-hm-interior-product-info__text {
+  width: 60%;
+}
+
+.-hm-interior-product-info__button {
+  width: 100%;
+  max-width: 280px;
+  height: 53px;
+  border-radius: 8px;
+  background-color: #72BF44;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+}
+
+.-hm-interior-product-info__button--transparent {
+  width: 100%;
+  max-width: 236px;
+  background-color: transparent;
+  border: 1px solid #72BF44;
+  color: #383838;
+}
+
+.-hm-interior-product-info__button--transparent svg {
+  margin-left: 20px;
+}
+
+.-hm-interior-product-info__button--transparent path {
+  color: #72BF44;
+}
+
+.-hm-interior-product-gallery {
+  grid-area: gallery;
+  margin-left: -20px;
+}
+
+.-hm-interior-product-gallery__item {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.-hm-interior-product-gallery__item.swiper-slide-thumb-active {
+  border: 1px solid #72BF44;
+}
+
+.-hm-interior-product-gallery__item img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.-hm-interior-product-gallery--main {
+  width: 100%;
+  height: 100%;
+  max-height: 650px;
+  padding: 0px 20px;
+}
+
+.-hm-interior-product-gallery--main .swiper-button-prev,
+.-hm-interior-product-gallery--main .swiper-button-next {
+  position: absolute;
+  left: auto;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.-hm-interior-product-gallery--main .swiper-button-prev::after,
+.-hm-interior-product-gallery--main .swiper-button-next::after {
+  display: none;
+}
+
+.-hm-interior-product-gallery--main .swiper-button-prev::after path,
+.-hm-interior-product-gallery--main .swiper-button-next::after path {
+  color: #383838;
+}
+
+.-hm-interior-product-gallery--main .swiper-button-prev::after:hover path,
+.-hm-interior-product-gallery--main .swiper-button-next::after:hover path {
+  color: #72BF44;
+}
+
+.-hm-interior-product-gallery--main .swiper-button-prev {
+  right: auto;
+  left: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.-hm-interior-product-gallery--thumb {
+  position: static;
+  max-width: 500px;
+  width: 100%;
+  max-height: 95px;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 30px;
+  padding-right: 20px;
+}
+
+.-hm-interior-product-gallery--thumb .-hm-interior-product-gallery__item {
+  max-width: 95px;
+  max-height: 95px;
+  width: 100%;
+  height: 100%;
+  margin-right: 15px;
+}
+
+.-hm-interior-product-gallery--thumb .-hm-interior-product-gallery__item img {
+  max-width: 95px;
+  max-height: 95px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.-hm-interior-product-text {
+  max-width: 1124px;
+  text-align: center;
+  margin: 80px auto 50px;
+}
+
+.-hm-interior-swiper__item {
+  width: 100%;
+  height: 450px;
+}
+
+.-hm-interior-swiper__item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.-hm-interior-swiper .swiper-pagination {
+  display: none;
+}
+
+.-hm-interior-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.-hm-interior-swiper .swiper-pagination-bullet-active {
+  background: #72BF44;
+}
+
+.-hm-interior-swiper .swiper-button-prev,
+.-hm-interior-swiper .swiper-button-next {
+  position: absolute;
+  left: auto;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.-hm-interior-swiper .swiper-button-prev::after,
+.-hm-interior-swiper .swiper-button-next::after {
+  display: none;
+}
+
+.-hm-interior-swiper .swiper-button-prev::after path,
+.-hm-interior-swiper .swiper-button-next::after path {
+  color: #383838;
+}
+
+.-hm-interior-swiper .swiper-button-prev::after path:hover path,
+.-hm-interior-swiper .swiper-button-next::after path:hover path {
+  color: #72BF44;
+}
+
+.-hm-interior-swiper .swiper-button-prev {
+  right: auto;
+  left: 20px;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
@@ -4639,6 +4899,10 @@ h6 {
 
   .-hm-interior-projects__title {
     font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-interior-product__title {
+    font-size: calc(24px + 4 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -4831,6 +5095,10 @@ h6 {
 
   .-hm-interior-projects__title {
     font-size: 36px;
+  }
+
+  .-hm-interior-product__title {
+    font-size: 28px;
   }
 }
 
@@ -5192,6 +5460,21 @@ h6 {
 
   .-hm-interior-projects .-hm-container:nth-child(2) {
     grid-template-columns: min(33% - 20px, 383px) min(33% - 20px, 383px) min(33% - 20px, 383px);
+  }
+
+  .-hm-interior-product-gallery--thumb {
+    max-height: 40px;
+    margin-top: 10px;
+  }
+
+  .-hm-interior-product-gallery--thumb .-hm-interior-product-gallery__item {
+    max-width: 40px !important;
+    max-height: 40px;
+  }
+
+  .-hm-interior-product-gallery--thumb .-hm-interior-product-gallery__item img {
+    max-width: 40px;
+    max-height: 40px;
   }
 }
 
@@ -5976,6 +6259,65 @@ h6 {
   .-hm-interior-projects .-hm-container:nth-child(2) {
     gap: 20px;
     grid-template-columns: 1fr;
+  }
+
+  .-hm-interior-product .-hm-container {
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "title" "gallery" "info";
+  }
+
+  .-hm-interior-product-info__text {
+    text-align: right;
+  }
+
+  .-hm-interior-product-info__row:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .-hm-interior-product-info__button {
+    max-width: 100%;
+  }
+
+  .-hm-interior-product-gallery {
+    margin-left: 0;
+  }
+
+  .-hm-interior-product-gallery--main {
+    height: 275px;
+    padding: 0px;
+  }
+
+  .-hm-interior-product-gallery--main .swiper-button-prev,
+  .-hm-interior-product-gallery--main .swiper-button-next {
+    display: none;
+  }
+
+  .-hm-interior-product-gallery--thumb {
+    height: 40px;
+    margin-left: 0;
+  }
+
+  .-hm-interior-product-text {
+    text-align: left;
+  }
+
+  .-hm-interior-swiper .swiper-pagination {
+    display: block;
+  }
+
+  .-hm-interior-swiper .swiper-button-prev,
+  .-hm-interior-swiper .swiper-button-next {
+    display: none;
+  }
+
+  .-hm-interior-swiper__item {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 }
 

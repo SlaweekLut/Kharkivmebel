@@ -1,0 +1,203 @@
+@import mixin
+
+.-hm-interior-product
+	margin-top: 30px
+	&__title
+		grid-area: title
+		@include fluid-type($minWidth, $maxWidth, 24px, 28px)
+
+	.-hm-container
+		display: grid
+		grid-template-columns: minmax(0px,1041px) minmax(0px,546px)
+		grid-template-rows: 40px auto
+		gap: 30px
+		grid-template-areas: 'gallery title' 'gallery info'
+	@include adaptive($tablet)
+		.-hm-container
+			grid-template-rows: auto
+			grid-template-columns: 100%
+			grid-template-areas: 'title' 'gallery' 'info'
+
+.-hm-interior-product-info
+	display: flex
+	flex-direction: column
+	gap: 46px
+	&__row
+		display: flex
+		&:last-child
+			gap: 30px
+	&__title
+		width: 40%
+	&__text
+		width: 60%
+	&__button
+		width: 100%
+		max-width: 280px
+		height: 53px
+		border-radius: 8px
+		background-color: $clGreen
+		font-weight: 600
+		color: #fff
+		font-size: 16px
+		&--transparent
+			width: 100%
+			max-width: 236px
+			background-color: transparent
+			border: 1px solid $clGreen
+			color: $clBlack
+			svg
+				margin-left: 20px
+			path
+				color: $clGreen
+	@include adaptive($tablet)
+		&__text
+			text-align: right
+		&__row
+			&:last-child
+				flex-direction: column
+				gap: 30px
+		&__button
+			max-width: 100%
+
+.-hm-interior-product-gallery
+	grid-area: gallery
+	margin-left: -20px
+	&__item
+		background-color: #f5f5f5
+		border-radius: 8px
+		overflow: hidden
+		max-width: 100% !important
+		max-height: 100% !important
+		&.swiper-slide-thumb-active
+			border: 1px solid $clGreen
+		img
+			width: 100% !important
+			height: 100% !important
+			object-fit: cover
+	&--main
+		width: 100%
+		height: 100%
+		max-height: 650px
+		padding: 0px 20px
+		.swiper-button-prev, .swiper-button-next
+			position: absolute
+			left: auto
+			right: 0
+			width: 45px
+			height: 45px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			background-color: #fff
+			transform: rotate(270deg)
+			&::after
+				display: none
+				path
+					color: $clBlack
+				&:hover
+					path
+						color: $clGreen
+		.swiper-button-prev
+			right: auto
+			left: 0
+			transform: rotate(90deg)
+
+	&--thumb
+		position: static
+		max-width: 500px
+		width: 100%
+		max-height: 95px
+		height: 100%
+		margin-left: 20px
+		margin-top: 30px
+		padding-right: 20px
+		.-hm-interior-product-gallery__item
+			max-width: 95px
+			max-height: 95px
+			width: 100%
+			height: 100%
+			margin-right: 15px
+			img
+				max-width: 95px
+				max-height: 95px
+				width: 100%
+				height: 100%
+				object-fit: cover
+	@include adaptive($smallScreen)
+		&--thumb
+			max-height: 40px
+			margin-top: 10px
+			.-hm-interior-product-gallery__item
+				max-width: 40px !important
+				max-height: 40px
+				img
+					max-width: 40px
+					max-height: 40px
+	@include adaptive($tablet)
+		margin-left: 0
+		&--main
+			height: 275px
+			padding: 0px
+			.swiper-button-prev, .swiper-button-next
+				display: none
+		&--thumb
+			height: 40px
+			margin-left: 0
+
+.-hm-interior-product-text
+	max-width: 1124px
+	text-align: center
+	margin: 80px auto 50px
+	@include adaptive($tablet)
+		text-align: left
+
+.-hm-interior-swiper
+	&__item
+		width: 100%
+		height: 450px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.swiper-pagination
+		display: none
+	.swiper-pagination-bullet
+		width: 8px
+		height: 8px
+		background-color: #fff
+		opacity: 1
+		&-active
+			background: $clGreen
+	.swiper-button-prev, .swiper-button-next
+		position: absolute
+		left: auto
+		right: 20px
+		width: 45px
+		height: 45px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: #fff
+		transform: rotate(270deg)
+		&::after
+			display: none
+			path
+				color: $clBlack
+				&:hover
+					path
+						color: $clGreen
+	.swiper-button-prev
+		right: auto
+		left: 20px
+		transform: rotate(90deg)
+	@include adaptive($tablet)
+		.swiper-pagination
+			display: block
+		.swiper-button-prev, .swiper-button-next
+			display: none
+		&__item
+			max-width: 100% !important
+			width: 100% !important

@@ -75,6 +75,7 @@ export const swiperFn = () => {
 		slidesPerView: 5,
 		direction: 'vertical'
 	});
+
 	if(window.innerWidth < 1023.98 && document.querySelector('.-hm-product-gallery--thumb') != null) {
 		thumbProductSwiper.destroy(false, true)
 		thumbProductSwiper = new Swiper(".-hm-product-gallery--thumb", {
@@ -139,6 +140,32 @@ export const swiperFn = () => {
 			swiper: thumbProductSwiper,
 		},
 	});
+
+	const thumbInteriorProductSwiper = new Swiper(".-hm-interior-product-gallery--thumb", {
+		loop: false,
+		allowTouchMove: false,
+		// spaceBetween: 15,
+		speed: 0,
+		longSwipesMs: 0,
+		slidesPerView: 5,
+		direction: 'horizontal'
+	});
+
+	const mainInteriorProductSwiper = new Swiper(".-hm-interior-product-gallery--main", {
+		loop: true,
+		allowTouchMove: false,
+		spaceBetween: 35,
+		speed: 0,
+		longSwipesMs: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		thumbs: {
+			swiper: thumbInteriorProductSwiper,
+		},
+	});
+	
 	const contactsProductSwiper = new Swiper(".-hm-contacts-swiper", {
 		loop: true,
 	
@@ -162,5 +189,26 @@ export const swiperFn = () => {
 		slidesPerView: 1,
 		spaceBetween: 60,
 
+	});
+
+	const interiorSwiper = new Swiper('.-hm-interior-swiper', {
+		loop: true,
+		spaceBetween: 44,
+		slidesPerView: 1,
+		centeredSlides: true,
+		pagination: {
+			el: '.swiper-pagination',
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		breakpoints: {
+			767.89: {
+				slidesPerView: 3,
+				centeredSlides: false,
+			}
+		}
 	});
 } 
