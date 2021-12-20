@@ -1396,6 +1396,123 @@ h6 {
   margin-right: 10px;
 }
 
+/** Форма заявки **/
+
+.-hm-request {
+  margin: 130px 0px 100px;
+}
+
+.-hm-request .-hm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1600px;
+  min-height: 740px;
+}
+
+.-hm-request__column {
+  overflow: hidden;
+}
+
+.-hm-request__column:first-child {
+  max-width: 840px;
+  border-radius: 8px 0 0 8px;
+  padding: 38px 68px;
+  background: url("../img/request-bg.svg") no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.-hm-request__column:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.-hm-request__title {
+  color: #fff;
+  margin-bottom: 26px;
+}
+
+.-hm-request__text {
+  color: #fff;
+}
+
+.-hm-request__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 70px;
+  margin: 50px 0;
+}
+
+.-hm-request__input {
+  height: 55px;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px 25px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.-hm-request__input::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__input::-moz-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__input:-ms-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__input::-ms-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__input::placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__textarea {
+  width: 100%;
+  height: 167px;
+  border-radius: 8px;
+  resize: none;
+  padding: 18px 25px;
+  background-color: #fff;
+}
+
+.-hm-request__textarea::-webkit-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__textarea::-moz-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__textarea:-ms-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__textarea::-ms-input-placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__textarea::placeholder {
+  color: #d1d1d1;
+}
+
+.-hm-request__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.-hm-request .-hm-checkbox {
+  margin: 22px 0px 40px;
+}
+
 /** Свайпер **/
 
 .-hm-swiper {
@@ -4119,6 +4236,310 @@ h6 {
   width: 164px;
 }
 
+/** Баннер **/
+
+.-hm-interior-hero {
+  height: 800px;
+  width: 100%;
+  background: url("../img/interior-bg.svg") no-repeat;
+  margin-top: 34px;
+}
+
+.-hm-interior-hero .-hm-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.-hm-interior-hero__title {
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.-hm-interior-hero__title span {
+  color: #72BF44;
+}
+
+.-hm-interior-hero__subtitle {
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.-hm-interior-hero__subtitle {
+  font-size: 20px;
+}
+
+.-hm-interior-hero__text {
+  max-width: 625px;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+
+.-hm-interior-hero__row {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+.-hm-interior-hero__button {
+  width: 220px;
+  height: 53px;
+  background-color: #72BF44;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.-hm-interior-hero__button--white {
+  color: #383838;
+  background-color: #fff;
+}
+
+/** Преймущества **/
+
+.-hm-interior-benefits {
+  margin-top: 78px;
+}
+
+.-hm-interior-benefits__title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.-hm-interior-benefits__title {
+  font-size: 24px;
+}
+
+.-hm-interior-benefits__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 90px;
+}
+
+.-hm-interior-benefits .-hm-container {
+  max-width: 1610px;
+}
+
+.-hm-interior-benefits-item {
+  max-width: 260px;
+}
+
+.-hm-interior-benefits-item__icon {
+  max-height: 168px;
+  max-width: 168px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.-hm-interior-benefits-item__text {
+  font-size: 16px;
+}
+
+/** Этапы работы **/
+
+.-hm-interior-stage {
+  margin-top: 120px;
+}
+
+.-hm-interior-stage .-hm-container {
+  max-width: 1610px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.-hm-interior-stage__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+}
+
+.-hm-interior-stage__column:first-child::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80%;
+  position: absolute;
+  bottom: 5px;
+  left: 9px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #bdbdbd), color-stop(0%, rgba(255, 255, 255, 0)));
+  background-image: -o-linear-gradient(#bdbdbd 50%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(#bdbdbd 50%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 1px 10px;
+  background-repeat: repeat-y;
+}
+
+.-hm-interior-stage__title {
+  font-weight: 700;
+  margin-bottom: 38px;
+}
+
+.-hm-interior-stage__title {
+  font-size: 24px;
+}
+
+.-hm-interior-stage__text {
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 58px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.-hm-interior-stage__text span {
+  min-width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 14px;
+  border-radius: 50%;
+  background-color: #72BF44;
+  color: #fff;
+}
+
+.-hm-interior-stage__text:last-child {
+  margin-bottom: 0;
+}
+
+.-hm-interior-stage__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+/** Проекты **/
+
+.-hm-interior-projects {
+  margin-top: 102px;
+}
+
+.-hm-interior-projects__title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.-hm-interior-projects__title {
+  font-size: 24px;
+}
+
+.-hm-interior-projects__button {
+  display: block;
+  max-width: 1200px;
+  width: 100%;
+  height: 50px;
+  background-color: #72BF44;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  margin: 70px auto 0px;
+}
+
+.-hm-interior-projects .-hm-container:nth-child(2) {
+  display: grid;
+  grid-template-columns: min(25% - 20px, 383px) min(25% - 20px, 383px) min(25% - 20px, 383px) min(25% - 20px, 383px);
+  gap: 30px 20px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.-hm-interior-projects-item {
+  position: relative;
+}
+
+.-hm-interior-projects-item__img {
+  width: 100%;
+}
+
+.-hm-interior-projects-item__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(62%, rgba(0, 0, 0, 0)), to(#000000));
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 62%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62%, #000000 100%);
+  padding: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.-hm-interior-projects-item__meters {
+  color: #fff;
+  display: inline;
+  width: 150px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #72BF44;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.-hm-interior-projects-item__title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 @media screen and (min-width: 320px) {
   h1 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
@@ -4202,6 +4623,22 @@ h6 {
 
   .-hm-user-card__label {
     font-size: calc(12px + 2 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-interior-hero__subtitle {
+    font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-interior-benefits__title {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-interior-stage__title {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
+  }
+
+  .-hm-interior-projects__title {
+    font-size: calc(24px + 12 * ((100vw - 320px) / 1600));
   }
 }
 
@@ -4378,6 +4815,22 @@ h6 {
 
   .-hm-user-card__label {
     font-size: 14px;
+  }
+
+  .-hm-interior-hero__subtitle {
+    font-size: 24px;
+  }
+
+  .-hm-interior-benefits__title {
+    font-size: 36px;
+  }
+
+  .-hm-interior-stage__title {
+    font-size: 36px;
+  }
+
+  .-hm-interior-projects__title {
+    font-size: 36px;
   }
 }
 
@@ -4642,6 +5095,14 @@ h6 {
     margin: 20px 0 0;
   }
 
+  .-hm-request__row {
+    gap: 30px;
+  }
+
+  .-hm-request__column:first-child {
+    padding: 35px 13px 40px;
+  }
+
   .-hm-category__container {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
@@ -4727,6 +5188,10 @@ h6 {
   .-hm-user-list,
   .-hm-user-view {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .-hm-interior-projects .-hm-container:nth-child(2) {
+    grid-template-columns: min(33% - 20px, 383px) min(33% - 20px, 383px) min(33% - 20px, 383px);
   }
 }
 
@@ -4832,6 +5297,22 @@ h6 {
 
   .-hm-form-subscribe__column:nth-child(3) {
     margin: 35px 0 0;
+  }
+
+  .-hm-request {
+    margin: 100px 0;
+  }
+
+  .-hm-request__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 60px 0px 30px;
+  }
+
+  .-hm-request__column:last-child {
+    display: none;
   }
 
   .-hm-swiper {
@@ -5404,6 +5885,97 @@ h6 {
 
   .-hm-user-card__row .-hm-user-card__label:last-child {
     grid-area: cvv;
+  }
+
+  .-hm-interior-hero {
+    height: 700px;
+  }
+
+  .-hm-interior-hero__subtitle {
+    margin: 15px 0px 10px;
+  }
+
+  .-hm-interior-hero__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: 26px;
+    gap: 14px;
+  }
+
+  .-hm-interior-benefits__row {
+    gap: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .-hm-interior-benefits-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .-hm-interior-benefits-item__icon {
+    width: 112px;
+    height: 112px;
+  }
+
+  .-hm-interior-stage {
+    margin-top: 72px;
+  }
+
+  .-hm-interior-stage .-hm-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .-hm-interior-stage__text {
+    white-space: normal;
+    margin-bottom: 36px;
+  }
+
+  .-hm-interior-stage__img {
+    width: calc(100% + 12px);
+    height: 468px;
+  }
+
+  .-hm-interior-stage__column:last-child {
+    margin-left: -12px;
+  }
+
+  .-hm-interior-projects {
+    margin-top: 78px;
+  }
+
+  .-hm-interior-projects__button {
+    margin-top: 48px;
+  }
+
+  .-hm-interior-projects__title {
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  .-hm-interior-projects .-hm-container:nth-child(2) {
+    gap: 20px;
+    grid-template-columns: 1fr;
   }
 }
 

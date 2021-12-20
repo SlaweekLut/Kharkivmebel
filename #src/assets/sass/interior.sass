@@ -1,0 +1,238 @@
+@import mixin
+
+/** Баннер **/
+.-hm-interior-hero
+	height: 800px
+	width: 100%
+	background: url('../img/interior-bg.svg') no-repeat
+	margin-top: 34px
+	.-hm-container
+		display: flex
+		align-items: center
+		height: 100%
+		flex-direction: column
+		justify-content: center
+	&__title
+		font-weight: bold
+		text-align: center
+		color: #fff
+		span
+			color: $clGreen
+
+	&__subtitle
+		font-weight: 600
+		text-align: center
+		margin: 20px 0
+		color: #fff
+
+		@include fluid-type($minWidth, $maxWidth, 20px, 24px)
+
+	&__text
+		max-width: 625px
+		font-size: 16px
+		color: #fff
+
+		text-align: center
+	&__row
+		margin-top: 36px
+		display: flex
+		gap: 60px
+	&__button
+		width: 220px
+		height: 53px
+		background-color: $clGreen
+		border-radius: 8px
+		color: #fff
+		font-weight: 600
+		&--white
+			color: $clBlack
+			background-color: #fff
+	@include adaptive($tablet)
+		height: 700px
+		&__subtitle
+			margin: 15px 0px 10px
+		&__row
+			flex-direction: column
+			margin-top: 26px
+			gap: 14px
+
+/** Преймущества **/
+
+.-hm-interior-benefits
+	margin-top: 78px
+	&__title
+		font-weight: 700
+		text-align: center
+		@include fluid-type($minWidth, $maxWidth, 24px, 36px)
+
+	&__row
+		display: flex
+		justify-content: space-between
+		gap: 20px
+		flex-wrap: wrap
+		margin-top: 90px
+	.-hm-container
+		max-width: 1610px
+	@include adaptive($tablet)
+		&__row
+			gap: 50px
+			justify-content: center
+
+.-hm-interior-benefits-item
+	max-width: 260px
+	&__icon
+		max-height: 168px
+		max-width: 168px
+		width: 100%
+		margin-bottom: 20px
+	&__text
+		font-size: 16px
+	@include adaptive($tablet)
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+		&__icon
+			width: 112px
+			height: 112px
+
+/** Этапы работы **/
+
+.-hm-interior-stage
+	margin-top: 120px
+	.-hm-container
+		max-width: 1610px
+		display: flex
+		gap: 20px
+		justify-content: space-between
+	&__column
+		display: flex
+		flex-direction: column
+		position: relative
+		&:first-child::before
+			content: ''
+			display: block
+			width: 1px
+			height: 80%
+			position: absolute
+			bottom: 5px
+			left: 9px
+			background-image: linear-gradient(#bdbdbd 50%, rgba(255,255,255,0) 0%)
+			background-position: right
+			background-size: 1px 10px
+			background-repeat: repeat-y
+	&__title
+		font-weight: 700
+		margin-bottom: 38px
+		@include fluid-type($minWidth, $maxWidth, 24px, 36px)
+	&__text
+		font-size: 16px
+		display: flex
+		margin-bottom: 58px
+		position: relative
+		z-index: 1
+		white-space: nowrap
+		span
+			min-width: 20px
+			height: 20px
+			display: flex
+			align-items: center
+			justify-content: center
+			line-height: 20px
+			font-size: 14px
+			font-weight: bold
+			margin-right: 14px
+			border-radius: 50%
+			background-color: $clGreen
+			color: #fff
+		&:last-child
+			margin-bottom: 0
+	&__img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	@include adaptive($tablet)
+		margin-top: 72px
+		.-hm-container
+			flex-direction: column
+			align-items: center
+			gap: 48px
+		&__text
+			white-space: normal
+			margin-bottom: 36px
+		&__img
+			width: calc(100% + 12px)
+			height: 468px
+		&__column
+			&:last-child
+				margin-left: -12px
+
+/** Проекты **/
+
+.-hm-interior-projects
+	margin-top: 102px
+	&__title
+		font-weight: 700
+		text-align: center
+		margin-bottom: 40px
+		@include fluid-type($minWidth, $maxWidth, 24px, 36px)
+	&__button
+		display: block
+		max-width: 1200px
+		width: 100%
+		height: 50px
+		background-color: $clGreen
+		border-radius: 8px
+		font-size: 18px
+		font-weight: 600
+		color: #fff
+		margin: 70px auto 0px
+
+	.-hm-container:nth-child(2)
+		display: grid
+		grid-template-columns: min(calc(25% - 20px), 383px) min(calc(25% - 20px), 383px) min(calc(25% - 20px), 383px) min(calc(25% - 20px), 383px)
+		gap: 30px 20px
+		justify-content: space-between
+	@include adaptive($smallScreen)
+		.-hm-container:nth-child(2)
+			grid-template-columns: min(calc(33% - 20px), 383px) min(calc(33% - 20px), 383px) min(calc(33% - 20px), 383px)
+	@include adaptive($tablet)
+		margin-top: 78px
+		&__button
+			margin-top: 48px
+		&__title
+			margin-bottom: 20px
+			text-align: left
+			padding-left: 12px
+		.-hm-container:nth-child(2)
+			gap: 20px
+			grid-template-columns: 1fr
+
+.-hm-interior-projects-item
+	position: relative
+	&__img
+		width: 100%
+	&__info
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0) 62%, #000000 100%)
+		padding: 18px
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+	&__meters
+		color: #fff
+		display: inline
+		width: 150px
+		padding-bottom: 8px
+		margin-bottom: 8px
+		border-bottom: 1px solid $clGreen
+		font-weight: 300
+		font-size: 14px
+	&__title
+		color: #fff
+		font-size: 18px
+		font-weight: 700
