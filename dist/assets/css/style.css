@@ -3322,6 +3322,24 @@ h6 {
   align-items: center;
 }
 
+.-hm-product-info__row--second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.-hm-product-info__row--complement {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .-hm-product-info__title {
   font-weight: 600;
 }
@@ -3471,10 +3489,18 @@ h6 {
   grid-area: button;
 }
 
+.-hm-product-info__button--order {
+  max-width: 250px;
+}
+
 .-hm-product-info__credit {
   grid-area: credit;
   width: 140px;
   font-weight: 600;
+}
+
+.-hm-product-info__credit--row {
+  width: auto;
 }
 
 .-hm-product-info__cards {
@@ -3548,6 +3574,44 @@ h6 {
 .-hm-product-history-item__price span {
   text-decoration: line-through;
   color: #E0E0E0;
+}
+
+.-hm-product-info-complement-item {
+  max-width: 150px;
+  padding: 9px 17px 16px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+
+.-hm-product-info-complement-item__img {
+  max-width: 80px;
+  max-height: 80px;
+  margin-bottom: 15px;
+}
+
+.-hm-product-info-complement-item__text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.-hm-product-info-complement-item__text:last-child {
+  display: none;
+}
+
+.-hm-product-info-complement-item__price {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.-hm-product-info-complement-item.active {
+  border-radius: 8px;
+  border-color: #E0E0E0;
+}
+
+.-hm-product-info-complement-item.active .-hm-product-info-complement-item__text:last-child {
+  display: block;
 }
 
 /** Контакты **/

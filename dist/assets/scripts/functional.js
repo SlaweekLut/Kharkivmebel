@@ -123,6 +123,7 @@ export const collectionFn = () => {
 }
 
 export const choiceMulti = () => {
+
 	const choiceMultiFn = (items) => {
 		items.forEach(item => {
 			item.addEventListener('click', () => {
@@ -130,6 +131,7 @@ export const choiceMulti = () => {
 			})
 		})
 	}
+
 	const choiceOneFn = (items, addiction) => {
 		items.forEach((item, index) => {
 			item.addEventListener('click', () => {
@@ -144,6 +146,8 @@ export const choiceMulti = () => {
 	}
 
 	const color = choiceOneFn(document.querySelectorAll('.-hm-product-info__color')) 
+
+	const complement = choiceOneFn(document.querySelectorAll('.-hm-product-info-complement-item')) 
 	
 	const materials = choiceMultiFn(document.querySelectorAll('.-hm-product-grid-aside-dropdown__materials'))
 	

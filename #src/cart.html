@@ -1,0 +1,166 @@
+@@include('_header.html')
+<main>
+	@@include('_line-nav.html', {first: 'Главная', second: 'Моя Корзина', third: ''})
+	<!-- Продукт -->
+	<div class="-hm-product">
+		<div class="-hm-container">
+			<div class="-hm-product-gallery">
+				<div class="swiper -hm-product-gallery--thumb" thumbsSlider="">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product2.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item -hm-product-gallery__item--more" data-photo="+3 фото">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+					</div>
+				</div>
+				<div class="swiper -hm-product-gallery--main">
+					<div class="swiper-button-prev">
+						<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11 1L9.25269 2.76297C7.85925 4.1689 7.16253 4.87187 6.31333 4.98011C6.10527 5.00663 5.89473 5.00663 5.68667 4.98011C4.83748 4.87187 4.14075 4.1689 2.74731 2.76297L1 1"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							/>
+						</svg>
+					</div>
+					<div class="swiper-button-next">
+						<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11 1L9.25269 2.76297C7.85925 4.1689 7.16253 4.87187 6.31333 4.98011C6.10527 5.00663 5.89473 5.00663 5.68667 4.98011C4.83748 4.87187 4.14075 4.1689 2.74731 2.76297L1 1"
+								stroke="currentColor"
+								stroke-width="1.5"
+								stroke-linecap="round"
+							/>
+						</svg>
+					</div>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product2.svg" alt="Продукт" />
+						</div>
+						<div class="swiper-slide -hm-product-gallery__item">
+							<img src="assets/img/product.svg" alt="Продукт" />
+						</div>
+					</div>
+				</div>
+				<h2 class="-hm-product-info__title">Вешалка 10 Ferrumon</h2>
+			</div>
+			<div class="-hm-product-info">
+				<h2 class="-hm-product-info__title">Вешалка 10 Ferrumon</h2>
+				<div class="-hm-product-info__row -hm-product-info__row--rate">
+					<p class="-hm-product-info__row-title">Оценка покупателей:</p>
+					<div class="-hm-product-info__row-content">
+						<div class="-hm-product-info__stars">
+							<div class="-hm-product-info__star"></div>
+							<div class="-hm-product-info__star"></div>
+							<div class="-hm-product-info__star"></div>
+							<div class="-hm-product-info__star"></div>
+							<div class="-hm-product-info__star"></div>
+						</div>
+						<a href="#" class="-hm-product-info__link">Нет отзывов</a>
+					</div>
+				</div>
+				<div class="-hm-product-info__row">
+					<p class="-hm-product-info__row-title">Код товара:</p>
+					<p class="-hm-product-info__text">i00078385</p>
+				</div>
+				<div class="-hm-product-info__row -hm-product-info__row--color">
+					<p class="-hm-product-info__row-title">Цвет:</p>
+					<div class="-hm-product-info__list">
+						<button class="-hm-product-info__color" data-color="#769699"></button>
+						<button class="-hm-product-info__color" data-color="#757374"></button>
+						<button class="-hm-product-info__color active" data-color="#383838"></button>
+					</div>
+				</div>
+				<div class="-hm-product-info__row -hm-product-info__row--price">
+					<div class="-hm-product-info__column -hm-product-info__column--price">
+						<p class="-hm-product-info__price">4,700 руб</p>
+						<p class="-hm-product-info__price -hm-product-info__price--discount">2,700 руб</p>
+					</div>
+					<div class="-hm-product-info__row--button">
+						<button class="-hm-product-info__button">Купить</button>
+						<button class="-hm-product-info__button -hm-product-info__button--like">
+							<svg width="32" height="29" viewBox="0 0 32 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M28.2567 3.17428C24.7823 -0.368948 20.7589 1.12541 18.2677 2.70572C16.86 3.59866 14.9101 3.59866 13.5024 2.70572C11.0111 1.12543 6.98783 -0.368909 3.51338 3.17428C-4.73445 11.5853 9.40987 27.7931 15.8851 27.7931C22.3603 27.7931 36.5046 11.5853 28.2567 3.17428Z"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linecap="round"
+								/>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div class="-hm-product-info__row -hm-product-info__row--credit">
+					<p class="-hm-product-info__credit">Оплата частями: 5 x 3 751 грн.</p>
+					<button class="-hm-product-info__button -hm-product-info__button--credit">Купить в кредит</button>
+					<div class="-hm-product-info__cards">
+						<img src="assets/img/credit-1.svg" alt="Карта" />
+						<img src="assets/img/credit-2.svg" alt="Карта" />
+						<img src="assets/img/credit-3.svg" alt="Карта" />
+						<img src="assets/img/credit-4.svg" alt="Карта" />
+					</div>
+				</div>
+				<h3 class="-hm-product-indo__title-two">Размер и Характеристики</h3>
+				<div class="-hm-product-info__row">
+					<p class="-hm-product-info__description-title">Материал корпуса</p>
+					<div class="-hm-product-info__underline"></div>
+					<p class="-hm-product-info__description-text -hm-product-info__description-text--semibold">Металл</p>
+				</div>
+				<div class="-hm-product-info__row">
+					<p class="-hm-product-info__description-title">Изготовитель</p>
+					<div class="-hm-product-info__underline"></div>
+					<p class="-hm-product-info__description-text -hm-product-info__description-text--semibold">Украина</p>
+				</div>
+				<h3 class="-hm-product-info__title-two">Описание</h3>
+				<p class="-hm-product-info__description-text">
+					Вешалка в прихожую из прочного металла из серии "Ferrumon"; Металл покрыт специальной краской, которая
+					защищает металл от коррозии продлевает срок службы; Обратите внимание, что цветопередача фото с каталога может
+					отличаться от цветов в живом виде из-за особенностей передачи цветов монитора Вашего компьютера, ноутбука,
+					планшета и т.д.
+				</p>
+			</div>
+			<div class="-hm-product-history">
+				<p class="-hm-product-history__title">Посмотренное:</p>
+				<div class="-hm-product-history-item">
+					<img src="assets/img/history.svg" alt="История" />
+					<p class="-hm-product-history-item__title">Диван "Ergonomic Rubber Shoes”</p>
+					<p class="-hm-product-history-item__price">35 990 ₽ <span>75 430 ₽</span></p>
+				</div>
+				<div class="-hm-product-history-item">
+					<img src="assets/img/history.svg" alt="История" />
+					<p class="-hm-product-history-item__title">Диван "Ergonomic Rubber Shoes”</p>
+					<p class="-hm-product-history-item__price">35 990 ₽ <span>75 430 ₽</span></p>
+				</div>
+				<div class="-hm-product-history-item">
+					<img src="assets/img/history.svg" alt="История" />
+					<p class="-hm-product-history-item__title">Диван "Ergonomic Rubber Shoes”</p>
+					<p class="-hm-product-history-item__price">35 990 ₽ <span>75 430 ₽</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Похожие товары -->
+	@@include('_swiper.html', {title: 'Похожие товары', longword: false})
+	<!-- Посмотренное товары -->
+	@@include('_swiper.html', {title: 'Посмотренное товары', longword: true})
+	<!-- Такие же товары -->
+	@@include('_swiper.html', {title: 'Такие же товары', longword: false})
+	<!-- Форма подписки -->
+	@@include('_subscribe-form.html')
+</main>
+@@include('_footer.html')

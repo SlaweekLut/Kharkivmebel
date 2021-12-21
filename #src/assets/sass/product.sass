@@ -148,6 +148,12 @@
 			flex-direction: row
 			grid-area: button
 			align-items: center
+		&--second
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+		&--complement
+			flex-wrap: wrap
 	&__title
 		@include fluid-type($minWidth, $maxWidth,24px, 40px)
 		font-weight: 600
@@ -234,19 +240,20 @@
 				height: 15px
 			path
 				color: #BDBDBD
-
 		&--credit
 			width: 100%
 			color: $clBlack
 			font-weight: 600
 			background-color: transparent
 			grid-area: button
-
+		&--order
+			max-width: 250px
 	&__credit
 		grid-area: credit
 		width: 140px
 		font-weight: 600
-
+		&--row
+			width: auto
 	&__cards
 		grid-area: cards
 		display: flex
@@ -330,3 +337,28 @@
 		span
 			text-decoration: line-through
 			color: #E0E0E0
+.-hm-product-info-complement-item
+	max-width: 150px
+	padding: 9px 17px 16px
+	text-align: center
+	cursor: pointer
+	border: 1px solid #fff
+	&__img
+		max-width: 80px
+		max-height: 80px
+		margin-bottom: 15px
+	&__text
+		font-size: 14px
+		margin-top: 5px
+		&:last-child
+			display: none
+	&__price
+		font-size: 14px
+		font-weight: 600
+		margin-top: 5px
+
+	&.active
+		border-radius: 8px
+		border-color: #E0E0E0
+		.-hm-product-info-complement-item__text:last-child
+			display: block
