@@ -5,6 +5,9 @@
 	align-items: center
 	justify-content: space-between
 	margin: 32px 0
+	&__subtitle
+		@include fluid-type($minWidth, $maxWidth, 18px, 20px)
+
 	&__clear
 		display: flex
 		align-items: center
@@ -20,6 +23,11 @@
 		&--pc
 		&--mobile
 			display: none
+	&--thanks
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		gap: 10px
 	@include adaptive($tablet)
 		&__clear
 			&--pc
@@ -31,15 +39,33 @@
 				path
 					color: $clGreen
 
+.-hm-cart-footer
+	display: flex
+	align-items: center
+	&__button
+		border-radius: 8px
+		height: 64px
+		background-color: $clGreen
+		max-width: 600px
+		width: 100%
+		color: #fff
+		font-weight: 600
+		font-size: 16px
+		margin: 0 auto
+		margin-bottom: 70px
 .-hm-cart-grid
 	display: grid
-	grid-template-columns: min(70%, 1030px) min(30%, 676px)
+	grid-template-columns: min(60%, 1030px) min(30%, 676px)
 	justify-content: space-between
 	gap: 30px
 	margin-bottom: 70px
-	@include adaptive($smallScreen)
-	gap: 32px
-	grid-template-columns: 1fr
+	&--thanks
+		justify-content: start
+		gap: min(150px, 6%)
+		grid-template-columns: min(60%, 1030px) 440px
+	@include adaptive(1350px)
+		gap: 32px
+		grid-template-columns: 1fr
 
 .-hm-cart-main
 	&-header
@@ -168,6 +194,10 @@
 	background-color: #F5F5F5
 	border-radius: 8px
 	padding: 20px 34px 50px
+	&__column
+		display: flex
+		flex-direction: column
+		gap: 10px
 	&__row
 		display: flex
 		justify-content: space-between
@@ -220,7 +250,11 @@
 			&--form
 				flex-direction: column
 				gap: 10px
-
+	&--thanks
+		display: flex
+		flex-direction: column
+		gap: 32px
+		max-height: 400px
 .-hm-cart-total-form
 	display: flex
 	flex-direction: column
@@ -261,3 +295,39 @@
 		background-color: #fff
 	&__item
 		padding: 17px 25px
+
+.-hm-popup-order-wrapper
+	display: none
+	align-items: center
+	flex-direction: column
+	justify-content: center
+	padding: 15px
+	&.active
+		display: flex !important
+	@include adaptive($tablet)
+		justify-content: flex-start
+	@include adaptiveHeight(720px)
+		justify-content: flex-start
+.-hm-popup-order
+	background-color: #fff
+	border-radius: 8px
+	padding: 20px 40px 53px
+	display: flex
+	flex-direction: column
+	position: relative
+	max-width: 490px
+	width: 100%
+	&__close
+		top: 30px
+		right: 36px
+		left: auto
+		cursor: pointer
+		&::after,&::before
+			background-color: $clBlack
+	&__header
+		padding-bottom: 20px
+		margin-bottom: 25px
+		border-bottom: 1px solid #E0E0E0
+	&__title
+		font-weight: 600
+		@include fluid-type($minWidth, $maxWidth, 20px, 24px)

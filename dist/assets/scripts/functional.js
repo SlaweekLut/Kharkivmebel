@@ -75,6 +75,12 @@ export const popupFn = () => {
 		[...document.querySelectorAll('.-hm-popup-auth__close')], 
 		null
 		)
+	const order = popupOpener (
+		document.querySelector('.-hm-popup-order-wrapper'), 
+		[...document.querySelectorAll('.-js-order-open')],
+		[...document.querySelectorAll('.-hm-popup-order__close')], 
+		null
+		)
 }
 
 export const collectionFn = () => {

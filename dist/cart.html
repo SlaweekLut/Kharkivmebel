@@ -892,6 +892,22 @@
 	</body>
 </html>
 
+<div class="-hm-popup-wrapper -hm-popup-order-wrapper -hm-popup-wrapper--darken">
+	<div class="-hm-popup-order">
+		<div class="-hm-close -hm-nav-mobile-close -hm-popup-order__close"></div>
+		<div class="-hm-popup-order__header">
+			<h2 class="-hm-popup-order__title">Оформить Заказ</h2>
+		</div>
+		<div class="-hm-popup-auth__content">
+			<form action="POST" class="-hm-popup-auth-form active">
+				<input type="text" class="-hm-popup-auth-form__input" placeholder="ФИО" />
+				<input type="text" class="-hm-popup-auth-form__input" placeholder="ТЕЛЕФОН" />
+				<input type="text" class="-hm-popup-auth-form__input" placeholder="ДОСТАВКА" />
+				<button class="-hm-popup-auth-form__button">Продолжить</button>
+			</form>
+		</div>
+	</div>
+</div>
 <main>
 	<nav class="-hm-linenav">
 	<div class="-hm-container">
@@ -1100,7 +1116,7 @@
 						<input type="text" class="-hm-cart-total__input" placeholder="Введите промокод" />
 						<button class="-hm-cart-total__button -hm-cart-total__button--text">Применить</button>
 					</div>
-					<form method="post" class="-hm-cart-total-form">
+					<div class="-hm-cart-total-form">
 						<p class="-hm-cart-total__title">Ваши контактные данные</p>
 						<div class="-hm-cart-total__row -hm-cart-total__row--form">
 							<input type="text" class="-hm-cart-total-form__input" placeholder="Ваше имя*" />
@@ -1119,8 +1135,8 @@
 								<p class="-hm-dropdown__item -hm-cart-total-form-dropdown__item">Оплата картой</p>
 							</div>
 						</div>
-						<button class="-hm-cart-total__button" type="submit">Оформить Заказ</button>
-					</form>
+						<button class="-hm-cart-total__button -js-order-open">Оформить Заказ</button>
+					</div>
 				</div>
 			</div>
 		</div>
