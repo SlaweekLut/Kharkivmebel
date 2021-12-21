@@ -1,1 +1,263 @@
 @import mixin
+
+.-hm-cart-header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin: 32px 0
+	&__clear
+		display: flex
+		align-items: center
+		gap: 13px
+		background: transparent
+		cursor: pointer
+		path
+			color: $clBlack
+		&:hover
+			color: $clGreen
+			path
+				color: $clGreen
+		&--pc
+		&--mobile
+			display: none
+	@include adaptive($tablet)
+		&__clear
+			&--pc
+				display: none
+			&--mobile
+				display: flex
+				justify-content: flex-end
+				color: $clGreen
+				path
+					color: $clGreen
+
+.-hm-cart-grid
+	display: grid
+	grid-template-columns: min(70%, 1030px) min(30%, 676px)
+	justify-content: space-between
+	gap: 30px
+	margin-bottom: 70px
+	@include adaptive($smallScreen)
+	gap: 32px
+	grid-template-columns: 1fr
+
+.-hm-cart-main
+	&-header
+		display: flex
+		justify-content: space-between
+		padding-bottom: 24px
+		border-bottom: 1px solid #E0E0E0
+		padding-right: 32px
+		&__item
+			color: #E0E0E0
+	&-item
+		display: grid
+		border-bottom: 1px solid #E0E0E0
+		padding: 24px 0
+		grid-template-columns: minmax(117px, 203px) repeat(2, 1fr) 100px
+		grid-template-areas: 'img info count price' 'img code actions actions'
+		position: relative
+		&__img
+			grid-area: img
+			border-radius: 8px
+			overflow: hidden
+			margin-right: 30px
+			max-width: 173px
+			max-height: 173px
+			height: 173px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&__info
+			grid-area: info
+		&__text
+			font-size: 15px
+			margin-bottom: 8px
+			&:last-child
+				margin-bottom: 0
+		&__code
+			grid-area: code
+			display: flex
+			align-items: flex-end
+			padding-bottom: 8px
+			color: #bdbdbd
+			font-size: 15px
+
+	&-item-count
+		grid-area: count
+		padding-left: 30px
+		&__button
+			width: 36px
+			height: 36px
+			border-radius: 10px
+			border: 1px solid #E0E0E0
+			font-size: 18px
+			font-weight: 600
+			background: transparent
+			cursor: pointer
+		&__input
+			text-align: center
+			font-weight: 600
+			width: 60px
+			@include fluid-type($minWidth, $maxWidth, 16px, 24px)
+
+	&-item-price
+		grid-area: price
+		text-align: center
+		&__discount
+			font-size: 20px
+		&__total
+			font-size: 18px
+			text-decoration: line-through
+			color: #d2cdcd
+	&-item-actions
+		grid-area: actions
+		display: flex
+		justify-content: flex-end
+		align-items: flex-end
+		padding-bottom: 8px
+		gap: 48px
+		&__button
+			height: 20px
+			font-size: 15px
+			background: transparent
+			display: flex
+			align-items: center
+			color: #bdbdbd
+			cursor: pointer
+			span
+				margin-right: 15px
+				color: #bdbdbd
+			path
+				color: #bdbdbd
+			&:hover
+				path, span
+					color: $clGreen
+
+	@include adaptive($tablet)
+		&-item
+			border-top: 1px solid #E0E0E0
+			margin-bottom: 25px
+			grid-template-columns: 117px minmax(calc(100% - 117px), 180px)
+			grid-template-rows: repeat(3, auto)
+			grid-template-areas: 'img info' 'img count' 'price price' 'code code'
+			&__img
+				margin-right: 14px
+				max-height: 103px
+		&-item-count
+			padding-left: 0
+		&-item-price
+			display: flex
+			gap: 15px
+
+		&-header
+			display: none
+		&-item-actions
+			&__button
+				right: 16px
+				position: absolute
+				span
+					display: none
+				&:first-child
+					bottom: 46px
+				&:last-child
+					top: 8px
+
+.-hm-cart-total
+	background-color: #F5F5F5
+	border-radius: 8px
+	padding: 20px 34px 50px
+	&__row
+		display: flex
+		justify-content: space-between
+		&--form
+			gap: 27px
+		&--margin
+			margin-bottom: 5px
+	&__title
+		font-weight: 600
+		line-height: 32px
+		@include fluid-type($minWidth, $maxWidth, 20px, 24px)
+
+	&__text
+		font-size: 15px
+		line-height: 32px
+		&--gray
+			color: #bdbdbd
+		&--green
+			color: $clGreen
+		&--big
+			font-size: 20px
+
+	&__checkbox
+		align-items: center
+		margin: 25px 0
+		span
+			color: #bdbdbd
+	&__input
+		font-size: 16px
+		background: transparent
+		&::placeholder
+			color: #bdbdbd
+
+	&__button
+		font-weight: 600
+		font-size: 16px
+		color: #fff
+		background: $clGreen
+		cursor: pointer
+		border-radius: 8px
+		&:not(&--text)
+			height: 53px
+			width: 100%
+		&--text
+			background: transparent
+			color: $clGreen
+	@include adaptive($tablet)
+		padding: 20px 15px 60px
+		&__row
+			&--form
+				flex-direction: column
+				gap: 10px
+
+.-hm-cart-total-form
+	display: flex
+	flex-direction: column
+	gap: 25px
+	margin-top: 30px
+	&__input
+		width: 100%
+		height: 55px
+		padding: 0px 25px
+		font-size: 15px
+		border-radius: 8px
+		border: 1px solid #E0E0E0
+		background-color: #fff
+		&::placeholder
+			color: #D1D1D1
+	.-hm-cart-total__title
+		margin-bottom: -14px
+	@include adaptive($tablet)
+		gap: 20px
+.-hm-cart-total-form-dropdown
+	&__opener
+		height: 55px
+		justify-content: space-between
+		border-radius: 8px
+		border: 1px solid #E0E0E0
+		background-color: #fff
+		padding: 0 25px
+		img
+			transform: rotate(270deg)
+		&.active img
+			transform: rotate(90deg)
+
+	&__list
+		left: 0
+		top: 55px
+		border-radius: 8px
+		border: 1px solid #E0E0E0
+		background-color: #fff
+	&__item
+		padding: 17px 25px

@@ -183,3 +183,20 @@ export const choiceColor = () => {
 		});
 	}
 }
+
+export const cart = () => {
+	const cartItemCount = document.querySelectorAll('.-hm-cart-main-item-count')
+	cartItemCount.forEach(count => {
+		const plus = count.querySelector('.plus')
+		const minus = count.querySelector('.minus')
+		const input = count.querySelector('.-hm-cart-main-item-count__input')
+
+		plus.addEventListener('click', () => {
+			input.value = +input.value + 1
+		})
+		minus.addEventListener('click', () => {
+			if(input.value - 1 >= 0) input.value = +input.value - 1
+		})
+
+	})
+}
