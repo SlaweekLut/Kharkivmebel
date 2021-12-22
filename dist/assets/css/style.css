@@ -5943,7 +5943,7 @@ h6 {
 
   .-hm-cart-grid {
     gap: 32px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
   }
 }
 
@@ -6061,6 +6061,7 @@ h6 {
     max-height: 400px;
     max-width: 400px;
     position: static;
+    padding: 0;
   }
 
   .-hm-product-gallery--main .swiper-button-prev,
@@ -6072,6 +6073,7 @@ h6 {
     min-width: 205px;
     min-height: 40px;
     position: static;
+    margin-left: 0;
   }
 
   .-hm-product-gallery--thumb .-hm-product-gallery__item {
@@ -6998,7 +7000,7 @@ h6 {
   }
 
   .-hm-cart-main-item-actions__button {
-    right: 16px;
+    right: 0;
     position: absolute;
   }
 
