@@ -76,9 +76,10 @@
 		display: flex
 		img
 			margin-left: auto
-
 		&.active
 			border-radius: 16px 16px 0 0
+			.-hm-sort-page-sort-dropdown__arrow
+				transform: rotate(180deg)
 	&__value
 		width: 100%
 		display: flex
@@ -328,6 +329,8 @@
 				transform: rotate(-45deg) scale(1)
 	&__link
 		padding-left: 16px
+	&__opener.active > img
+		transform: rotate(180deg)
 .-hm-mobile-filter
 	background-color: #fff
 	min-height: 100vh

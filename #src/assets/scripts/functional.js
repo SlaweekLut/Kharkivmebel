@@ -22,6 +22,7 @@ export const dropdownFn = () => {
 
 export const popupFn = () => {
 	const popupOpener = (popup, open, close, closeopen) => {
+		console.log(close);
 		if(open != null) {
 			let openArr = open
 			openArr.forEach((item) => {
@@ -85,6 +86,18 @@ export const popupFn = () => {
 		document.querySelector('.-hm-popup-credit-wrapper'), 
 		[...document.querySelectorAll('.-js-credit-open')],
 		[...document.querySelectorAll('.-hm-popup-credit__close')], 
+		null
+		)
+	const catalogMaterials = popupOpener (
+		document.querySelector('.-hm-popup-catalog-wrapper--catalog'), 
+		[...document.querySelectorAll('.-js-open-catalog-materials')],
+		[...document.querySelectorAll('.-hm-popup-catalog__close'), ...document.querySelectorAll('.-hm-popup-catalog-item')], 
+		null
+		)
+	const catalogItem = popupOpener (
+		document.querySelector('.-hm-popup-catalog-wrapper--item'), 
+		[...document.querySelectorAll('.-hm-popup-catalog-item')],
+		[...document.querySelectorAll('.-hm-popup-catalog__close'), ...document.querySelectorAll('.-js-open-catalog-materials')], 
 		null
 		)
 }
