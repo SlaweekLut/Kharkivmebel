@@ -81,6 +81,12 @@ export const popupFn = () => {
 		[...document.querySelectorAll('.-hm-popup-order__close')], 
 		null
 		)
+	const credit = popupOpener (
+		document.querySelector('.-hm-popup-credit-wrapper'), 
+		[...document.querySelectorAll('.-js-credit-open')],
+		[...document.querySelectorAll('.-hm-popup-credit__close')], 
+		null
+		)
 }
 
 export const collectionFn = () => {
