@@ -3360,6 +3360,20 @@ h6 {
   font-size: 24px;
 }
 
+.-hm-product-info__catalog-open {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  background: transparent;
+  border-bottom: 1px solid #72BF44;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1px 2px;
+}
+
 .-hm-product-info__row-title {
   font-size: 16px;
   color: #bdbdbd;
@@ -3894,6 +3908,7 @@ h6 {
 
 .-hm-popup-catalog-filter .-hm-sort-page-view__button {
   margin-right: 0;
+  margin-left: 20px;
 }
 
 .-hm-popup-catalog-header {
