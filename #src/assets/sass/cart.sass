@@ -80,7 +80,7 @@
 		display: grid
 		border-bottom: 1px solid #E0E0E0
 		padding: 24px 0
-		grid-template-columns: minmax(117px, 203px) repeat(2, 1fr) 100px
+		grid-template-columns: 16% 40% 19% 25%
 		grid-template-areas: 'img info count price' 'img code actions actions'
 		position: relative
 		&__img
@@ -112,7 +112,8 @@
 
 	&-item-count
 		grid-area: count
-		padding-left: 30px
+		display: flex
+		justify-content: center
 		&__button
 			width: 36px
 			height: 36px
@@ -125,18 +126,26 @@
 		&__input
 			text-align: center
 			font-weight: 600
+			height: 36px
 			width: 60px
 			@include fluid-type($minWidth, $maxWidth, 16px, 24px)
-
+		&__thanks
+			text-align: center
+			font-weight: 600
+			// width: 50%
+			@include fluid-type($minWidth, $maxWidth, 16px, 24px)
 	&-item-price
 		grid-area: price
 		text-align: center
+		max-width: 100px
+		margin-left: auto
 		&__discount
 			font-size: 20px
 		&__total
 			font-size: 18px
 			text-decoration: line-through
 			color: #d2cdcd
+
 	&-item-actions
 		grid-area: actions
 		display: flex
@@ -171,12 +180,17 @@
 			&__img
 				margin-right: 14px
 				max-height: 103px
+
 		&-item-count
 			padding-left: 0
 		&-item-price
 			display: flex
 			gap: 15px
-
+			max-width: 100%
+			margin-left: 0
+			margin-top: 20px
+		&-item-count
+			justify-content: flex-start
 		&-header
 			display: none
 		&-item-actions
