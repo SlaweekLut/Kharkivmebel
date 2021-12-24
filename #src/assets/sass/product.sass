@@ -507,9 +507,24 @@
 	align-items: center
 	flex-direction: column
 	justify-content: flex-start
-	padding: 12px
+	padding: 50vh 12px 12px
+	overflow: hidden
 	&.active
 		display: flex !important
+	@include adaptiveHeight(990px)
+		overflow: auto
+		padding: 12px
+		&--item
+			overflow: hidden
+			padding: 50vh 12px 12px
+	@include adaptiveHeight(700px)
+		&--item
+			padding: 12px !important
+			overflow: auto !important
+	@include adaptive(730px)
+		&--item
+			padding: 12px !important
+			overflow: auto !important
 
 .-hm-popup-catalog
 	background-color: #fff
@@ -519,6 +534,7 @@
 	position: relative
 	max-width: 1400px
 	width: 100%
+	transform: translateY(-50%)
 	&__close
 		top: 22px
 		right: 30px
@@ -528,6 +544,17 @@
 			background-color: $clBlack
 	@include adaptive(880px)
 		padding: 17px 17px 26px
+	@include adaptiveHeight(990px)
+		transform: translate(0)
+		&--item
+			transform: translateY(-50%)
+	@include adaptiveHeight(700px)
+		&--item
+			transform: translate(0) !important
+
+	@include adaptive(730px)
+		&--item
+			transform: translate(0) !important
 
 .-hm-popup-catalog-filter
 	display: flex
@@ -553,6 +580,7 @@
 	.-hm-sort-page-view__button
 		margin-right: 0
 		margin-left: 20px
+
 .-hm-popup-catalog-header
 	display: flex
 	&__title
@@ -582,12 +610,13 @@
 			border-bottom: 0
 	&__filter
 		grid-area: filter
-
 	&__content
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr
 		gap: 35px 5%
 		grid-area: content
+		max-height: 625px
+		overflow: auto
 	@include adaptive($smallScreen)
 		&__filter
 			flex-direction: column
@@ -613,6 +642,10 @@
 		&__content
 			grid-template-columns: 1fr
 
+	@include adaptiveHeight(990px)
+		&__content
+			overflow: visible
+			max-height: unset
 .-hm-popup-catalog-item
 	max-width: 200px
 	cursor: pointer
@@ -647,7 +680,7 @@
 	display: grid
 	gap: 0 8%
 	grid-template-columns: minmax(30%, 370px) minmax(62%, 683px)
-	grid-template-rows: auto auto
+	grid-template-rows: 40px auto
 	grid-template-areas: 'img title' 'img info'
 	&__img
 		grid-area: img

@@ -3821,7 +3821,8 @@ h6 {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 12px;
+  padding: 50vh 12px 12px;
+  overflow: hidden;
 }
 
 .-hm-popup-catalog-wrapper.active {
@@ -3843,6 +3844,9 @@ h6 {
   position: relative;
   max-width: 1400px;
   width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .-hm-popup-catalog__close {
@@ -3971,6 +3975,8 @@ h6 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 35px 5%;
   grid-area: content;
+  max-height: 625px;
+  overflow: auto;
 }
 
 .-hm-popup-catalog-item {
@@ -4015,7 +4021,7 @@ h6 {
   display: grid;
   gap: 0 8%;
   grid-template-columns: minmax(30%, 370px) minmax(62%, 683px);
-  grid-template-rows: auto auto;
+  grid-template-rows: 40px auto;
   grid-template-areas: "img title" "img info";
 }
 
@@ -7808,6 +7814,19 @@ h6 {
   }
 }
 
+@media screen and (max-width: 730px) {
+  .-hm-popup-catalog-wrapper--item {
+    padding: 12px !important;
+    overflow: auto !important;
+  }
+
+  .-hm-popup-catalog--item {
+    -webkit-transform: translate(0) !important;
+    -ms-transform: translate(0) !important;
+    transform: translate(0) !important;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .-hm-popup-catalog-grid__content {
     grid-template-columns: 1fr;
@@ -7849,5 +7868,47 @@ h6 {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+}
+
+@media screen and (max-height: 990px) {
+  .-hm-popup-catalog-wrapper {
+    overflow: auto;
+    padding: 12px;
+  }
+
+  .-hm-popup-catalog-wrapper--item {
+    overflow: hidden;
+    padding: 50vh 12px 12px;
+  }
+
+  .-hm-popup-catalog {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+  }
+
+  .-hm-popup-catalog--item {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .-hm-popup-catalog-grid__content {
+    overflow: visible;
+    max-height: unset;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .-hm-popup-catalog-wrapper--item {
+    padding: 12px !important;
+    overflow: auto !important;
+  }
+
+  .-hm-popup-catalog--item {
+    -webkit-transform: translate(0) !important;
+    -ms-transform: translate(0) !important;
+    transform: translate(0) !important;
   }
 }
