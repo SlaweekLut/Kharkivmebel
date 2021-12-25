@@ -93,6 +93,12 @@
 		top: 44px
 		border-radius: 0 0 16px 16px
 		background-color: #F5F5F5
+		&--mobile
+			z-index: 5
+			top: 62px
+			& > .-hm-sort-page-sort-dropdown__item
+				img
+					margin-right: 0
 	&__item
 		padding: 12px 24px
 		width: 240px
@@ -133,7 +139,7 @@
 			grid-template-columns: 280px 1fr
 	@include adaptive($tablet)
 		.-hm-container
-			grid-template-columns: 1fr
+			grid-template-columns: 100%
 			grid-template-areas: 'catalog' 'pagination'
 
 .-hm-product-grid-aside
@@ -331,6 +337,18 @@
 		padding-left: 16px
 	&__opener.active > img
 		transform: rotate(180deg)
+	.-hm-checkbox-green
+		margin-bottom: 25px
+		&__box
+			border-color: #E5E5E5
+			margin-right: 16px
+		&__text
+			display: flex
+			width: 100%
+			justify-content: space-between
+		&:last-child
+			margin-bottom: 0
+
 .-hm-mobile-filter
 	background-color: #fff
 	min-height: 100vh

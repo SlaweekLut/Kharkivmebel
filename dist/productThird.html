@@ -22,6 +22,41 @@
 		<script src="assets/scripts/script.min.js" type="module" defer></script>
 	</head>
 	<body>
+
+		<div class="-hm-popup-wrapper -hm-mobile-search-wrapper">
+			<div class="-hm-mobile-search">
+				<div class="-hm-container">
+					<div class="-hm-mobile-search-header">
+						<img src="assets/img/search-black.svg" alt="поиск">
+						<input type="text" class="-hm-mobile-search-header__input" placeholder="Введите текст">
+						<div class="-hm-close -hm-nav-mobile-close -hm-mobile-search-header__close"></div>
+					</div>
+					<div class="-hm-mobile-search-item">
+						<img src="assets/img/product.svg" alt="Продукт" class="-hm-mobile-search-item__img">
+						<div class="-hm-mobile-search-item__column">
+							<p class="-hm-mobile-search-item__title">Вешалка 10 Ferrumon</p>
+							<p class="-hm-mobile-search-item__price">2700 Руб</p>
+						</div>
+					</div>
+					<div class="-hm-mobile-search-item">
+						<img src="assets/img/product.svg" alt="Продукт" class="-hm-mobile-search-item__img">
+						<div class="-hm-mobile-search-item__column">
+							<p class="-hm-mobile-search-item__title">Вешалка 10 Ferrumon</p>
+							<p class="-hm-mobile-search-item__price">2700 Руб</p>
+						</div>
+					</div>
+					<div class="-hm-mobile-search-item">
+						<img src="assets/img/product.svg" alt="Продукт" class="-hm-mobile-search-item__img">
+						<div class="-hm-mobile-search-item__column">
+							<p class="-hm-mobile-search-item__title">Вешалка 10 Ferrumon</p>
+							<p class="-hm-mobile-search-item__price">2700 Руб</p>
+						</div>
+					</div>
+					<a href="#" class="-hm-mobile-search__link">Смотреть все</a>
+			</div>
+			</div>
+		</div>
+
 		<div class="-hm-popup-wrapper -hm-nav-mobile-wrapper">
 			<div class="-hm-nav-mobile">
 				<div class="-hm-nav-mobile-header">
@@ -584,6 +619,7 @@
 			<p class="-hm-text__small -hm-header-top__text">
 				<img src="assets/img/delivery.svg" alt="Доставка" /> Доставка и сборка по Харькову бесплатно!
 			</p>
+			<button id="js-close-top"><img src="assets/img/Close.svg" alt="Закрыть"></button>
 		</header>
 		<div class="-hm-header-address">
 			<div class="-hm-container -hm-header-address__container">
@@ -861,7 +897,7 @@
 				<nav class="-hm-header-nav -hm-header-nav--mobile">
 					<a href="#" class="-hm-header-nav__logo"> <img src="assets/img/logo.svg" alt="Логотип" /></a>
 
-					<button href="#" class="-hm-header-nav__item">
+					<button href="#" class="-hm-header-nav__item js-search-mobile">
 						<img src="assets/img/search-black.svg" alt="Поиск" />
 					</button>
 					<a href="#" class="-hm-header-nav__item">

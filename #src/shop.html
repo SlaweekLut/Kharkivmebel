@@ -56,6 +56,34 @@
 				<div class="-hm-dropdown -hm-product-grid-aside-dropdown">
 					<div class="-hm-dropdown__opener -hm-product-grid-aside-dropdown__opener">
 						<img src="assets/img/dropdown.svg" alt="Выпадающее меню" />
+						Материал корпуса
+					</div>
+					<div class="-hm-dropdown__list -hm-product-grid-aside-dropdown__list">
+						<label class="-hm-checkbox-green">
+							<input type="checkbox" class="-hm-checkbox-green__input" />
+							<span class="-hm-checkbox-green__box">
+								<img src="assets/img/check2.svg" alt="галочка" />
+							</span>
+							<span class="-hm-checkbox-green__text">
+								<span>ДСП</span>
+								<span>18</span>
+							</span>
+						</label>
+						<label class="-hm-checkbox-green">
+							<input type="checkbox" class="-hm-checkbox-green__input" />
+							<span class="-hm-checkbox-green__box">
+								<img src="assets/img/check2.svg" alt="галочка" />
+							</span>
+							<span class="-hm-checkbox-green__text">
+								<span>Металл</span>
+								<span>150</span>
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="-hm-dropdown -hm-product-grid-aside-dropdown">
+					<div class="-hm-dropdown__opener -hm-product-grid-aside-dropdown__opener">
+						<img src="assets/img/dropdown.svg" alt="Выпадающее меню" />
 						Ширина
 					</div>
 					<div class="-hm-dropdown__list -hm-product-grid-aside-dropdown__list">
@@ -118,7 +146,7 @@
 			</div>
 	</div>
 	</div>
-	</div>
+</div>
 </div>
 <main>
 	@@include('_line-nav.html', {first: 'Главная', second: 'Мебель для спальни', third: 'Кровати'})
@@ -225,10 +253,31 @@
 				<img src="assets/img/filterMobile.svg" alt="Фильтр" />
 				Фильтр
 			</button>
-			<button class="-hm-sort-page__button">
-				<img src="assets/img/sortMobile.svg" alt="Сортировка" />
-				Сортировка
-			</button>
+			<div class="-hm-dropdown -hm-sort-page__button">
+				<button class="-hm-sort-page__button -hm-dropdown__opener">
+					<img src="assets/img/sortMobile.svg" alt="Сортировка" />
+					Сортировка
+				</button>
+				<div class="-hm-sort-page-sort-dropdown__list -hm-sort-page-sort-dropdown__list--mobile -hm-dropdown__list">
+					<div class="-hm-dropdown__item -hm-sort-page-sort-dropdown__item">
+						По цене
+						<img src="assets/img/filterUpToDown.svg" alt="Сначала дорогие" />
+					</div>
+					<div class="-hm-dropdown__item -hm-sort-page-sort-dropdown__item">
+						По цене
+						<img src="assets/img/filterDownToUp.svg" alt="Сначала дешевые" />
+					</div>
+					<div class="-hm-dropdown__item -hm-sort-page-sort-dropdown__item">
+						Вариант 1
+						<img src="assets/img/filterUpToDown.svg" alt="Сначала дорогие" />
+					</div>
+					<div class="-hm-dropdown__item -hm-sort-page-sort-dropdown__item">
+						Вариант 2
+						<img src="assets/img/filterDownToUp.svg" alt="Сначала дешевые" />
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</section>
 
